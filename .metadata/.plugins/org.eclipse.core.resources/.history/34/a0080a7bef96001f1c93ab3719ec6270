@@ -7,10 +7,10 @@ public class Ejercicio1Array {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Integer[]numPares = new Integer[15];
-		int contador = 2;
-		 for(int  i = 0; i< numPares.length ; i++) {
-			 numPares [1]=contador++;
-		  
+		int num;
+		 for(num =1; num<=30 ; num++);
+		  if (num %2==0) {
+			  numPares = num;
 			  sc.close();
 		  }
 		 

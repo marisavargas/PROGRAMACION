@@ -19,5 +19,4 @@ public class Ejercicio24Repaso {
 		}
 	}sc.close();
 }
-
 }
