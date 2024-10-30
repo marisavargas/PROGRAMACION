@@ -7,11 +7,10 @@ public class Ejercici3Array {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(" ¿Cuantos numeros vas a introducir?");
-		Integer[] numero;
-		for ( int i =0; i < numero; i++) {
-			numero [0]= i;
-		} System.out.println( i );
-		sc.close();
+		Integer[] numero = new Integer[];
+		for ( int i =0; i < numero.length; i++) {
+			
+		}
 	
 
 	}
