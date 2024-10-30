@@ -10,7 +10,7 @@ public class Ejercicio1Array {
 		int num;
 		 for(num =1; num<=30 ; num++);
 		  if (num %2==0) {
-			  numPares = num;
+			  numPares = num ;
 			  sc.close();
 		  }
 		 
