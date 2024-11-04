@@ -15,9 +15,9 @@ public class Ejercicio7Array {
 		}
 		
 		Integer [] listaNueva = new Integer[numero];
-		for (int j = lista.length; j >= listaNueva.length; j--) {
+		for (int j = lista.length; j >= listaNueva.length-1; j--) {
 			j= sc.nextInt();
-		 listaNueva [j]= lista.length-1;
+		 listaNueva [j]= lista.length;
 		 System.out.println(j);
 		}
 	}
