@@ -2,10 +2,9 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class Ejercici3Array {
+public class Ejercicio3Array {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Cuantos numero vas a introducir");
 		int num = sc.nextInt();

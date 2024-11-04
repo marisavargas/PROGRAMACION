@@ -2,10 +2,9 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class Ejercici3Array {
+public class Ejercicio4Array {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Cuantos numero vas a introducir");
 		int num = sc.nextInt();
@@ -17,10 +16,9 @@ public class Ejercici3Array {
 			lista [i]= x; // esto es para que me ponga el numero que introduce por el escaner en su hueco de la cajita
 				
 		}
-		for (int i = 0; i < lista.length; i++) {
+		for (int i = num -1; i >=0; i--) { // en este bucle tenemos que indicarle que la ultima posicion es -1 y que i >=0 porque si lo contamos al reves cogeria posiciones que no existen
 			System.out.println("mostrar el contenido" + lista [i]); // esto es para que me muestre el contenido de cada cajita de la array
 		}sc.close();
-		
 	}
 
 }
