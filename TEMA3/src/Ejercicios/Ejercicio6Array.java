@@ -12,7 +12,7 @@ public class Ejercicio6Array {
 			String palabra = sc.next();
 			lista [i]= palabra;
 		}
-		String suma= "";     // ponemos suma para declararla
+		String suma= "";     // ponemos suma para declararla.
 		for (int i = 0; i < lista.length; i++) {
 			suma = suma + lista[i];  // aqui le indicamos que suma es igual a suma mas la palabra siguiente
 			
