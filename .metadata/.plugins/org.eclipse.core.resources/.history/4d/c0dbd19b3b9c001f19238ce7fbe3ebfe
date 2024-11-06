@@ -6,7 +6,7 @@ public class Ejercici3Array {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Cuantos numero vas a introducir");
 		int num = sc.nextInt();
 		int [] lista = new int [num];
