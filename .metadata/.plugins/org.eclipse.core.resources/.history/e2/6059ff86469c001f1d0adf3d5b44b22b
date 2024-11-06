@@ -1,6 +1,6 @@
 package Ejercicios;
 
-public class Ejercicio10Array {
+public class Ejercicio05Array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

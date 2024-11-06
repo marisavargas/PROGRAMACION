@@ -1,0 +1,47 @@
+package Ejercicios;
+
+import java.util.Scanner;
+
+public class Ejercicio05Array {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("¿Cuantos numero vas a introducir");
+		int num = sc.nextInt();
+		int[] lista = new int[num];
+		int x = 0;
+		int  maximo = lista [0];
+		int  minimo = lista [0];
+		int posMaximo = 0;
+		int posMinimo = 0;
+		int suma = 0;
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println("Introduce un numero");
+			x = sc.nextInt();
+			lista[i] = x; // esto es para que me ponga el numero que introduce por el escaner en su hueco
+							// de la cajita
+
+		}
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println("mostrar el contenido" + lista[i]); // esto es para que me muestre el contenido de cada
+				if(maximo  <= lista [i]) {// cajita de la array
+					maximo  = lista [i];
+					posMaximo =i;
+				}
+				else if (minimo >=lista[i] ) {
+					 minimo  = lista [i];
+					 posMinimo = i;
+					
+				}
+			suma += lista [i];	
+		}
+		System.out.println("el numro maximo es "+  maximo  + "y la posicion es " + posMaximo);
+		System.out.println(" el numro minimo es "+ minimo  + " y la posicion es " + posMinimo);
+		System.out.println(" la media es "+ suma / num);// tambien posemos poner lista.length
+		
+		sc.close();
+
+	}
+
+}
