@@ -1,51 +1,26 @@
 package Ejercicios;
 
+
 import java.util.Scanner;
 
 public class Ejercicio11ArraySplit {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String texto;						
-		int posicion1;
-		int posicion2;
-		String textoFinal;
-
-		while (true) {
-			System.out.println("Escribe un mensaje:");
-			texto = sc.nextLine();
-			
-			if (texto.startsWith("hola") && texto.endsWith("hastaluego")) { // con esto le indicamos como queremos que
-				System.out.println("esto es correcto");
-												// empiece y termine nuestro texto
-				posicion1 = texto.indexOf("a");// le indicamos las posiciones de la "a" y de la "h" primero
-				posicion2 = texto.lastIndexOf("h");
-				textoFinal = texto.substring(posicion1 + 1, posicion2);// le decimos que nuestro texto final es lo que
-																		// mete el usuario por consola
-				System.out.println (textoFinal );
-			}
-
-			else if (texto.startsWith("hola") && texto.endsWith("adios")) {
-				
-				System.out.println(" fin");
-				break;
-
-			}
-			else {
-				System.out.println(" esto no es correcto, repitelo");
-			}
+		Scanner sc = new Scanner(System.in); // Pedimos el nombre completo por pantalla
+		System.out.println("Dime tu nombre completo");
+		String nombre = sc.nextLine();
+	
+		String[] parte1 = nombre.split(" ");
+		for (int i = 0; i < parte1.length; i++) { // esto es con el for nomal y array y mediante las posiciones
+			System.out.println("tu nombre completo es:" + parte1[i]);
+		}sc.close();
+		
 		}
-
-
 	}
 
-}
-
-
-/* Realizar un programa que solicite un texto al usuario. Si el texto comienza por “hola” y termina 
-con “hastaluego”, le indicaremos que lo hemos entendido, e imprimiremos el mensaje que hay 
-entre esas dos palabras.  
-Por ejemplo, si el usuario escribe “hola cómo estás hastaluego” 
-Debemos decir: Lo he entendido. Mensaje: cómo estás. 
-Si el texto no cumple estos requisitos, le indicaremos que no lo hemos entendido, y que nos lo 
-repita otra vez*/
+/* esto es con forych
+ * for (String palabra : array){
+ * syso.out.println (palabra) es mas facil
+ * porque te recorre el array y te va dando 
+ * los que tiene dentro mientras lo recorre y
+ * siempre lo guarda en palabra.*/

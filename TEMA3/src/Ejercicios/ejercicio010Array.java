@@ -5,20 +5,23 @@ import java.util.Scanner;
 public class ejercicio010Array {
 
 	public static void main(String[] args) {
-		Scanner sc =new Scanner(System.in);
-		System.out.println(" Indique el tamaño que tendrá que ser mayor que 2");
+		Scanner sc = new Scanner(System.in);
 		int tam = sc.nextInt();
-				
-		int[] lista = new int [tam];
-		lista [0]=0;
-		lista [1]=1;
+		do {
+			System.out.println(" Indique el tamaño que tendrá que ser mayor que 2");
+		} while (tam <= 2);
+		int[] lista = new int[tam];
+		lista[0] = 0;
+		lista[1] = 1;
 		for (int i = 2; i < lista.length; i++) {
-			lista [i]= lista [i-1] + lista [i-2];  // esto es para leer el array con la serie fibonacci
-			
+			lista[i] = lista[i - 1] + lista[i - 2]; // esto es para leer el array con la serie fibonacci
+
 		}
-		System.out.println(" el contenido del array es" );
+		System.out.println(" el contenido del array es");
 		for (int i = 0; i < lista.length; i++) {
-		System.out.println(lista [i] + " ");	
-		}sc.close();
+			System.out.println(lista[i] + " ");
+		}
+		sc.close();
 	}
 }
+// estudiar
