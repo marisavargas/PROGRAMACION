@@ -10,12 +10,10 @@ public class Ejercicio18repasoClase {
 		System.out.println("introduce una palabra");
 		String palabra = " ";
 		palabra = sc.next();
-		int longui = palabra.length();
-		for ()
-		
-			
-		}sc.close();
-		
+		for (int i = palabra.length(); i > 0; i--) { // comienzo por el final de la palabra y vamos decrementando el
+		System.out.print(palabra.substring(i - 1, i));// contador
+		}
+		sc.close();
 
 	}
 
