@@ -14,7 +14,7 @@ public class Ejercicio16Arraysplit {
 		
 		String []letras = texto.split("");
 		for (int i = 0; i < letras.length; i++) {
-			if (letras[i].contains("a")) {
+			if (letras[i].equalsIgnoreCase("a")) {
 			a++;
 		}
 	}
