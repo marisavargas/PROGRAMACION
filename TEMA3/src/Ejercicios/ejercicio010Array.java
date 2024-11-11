@@ -6,9 +6,11 @@ public class ejercicio010Array {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int tam = sc.nextInt();
+		int tam =0;
 		do {
 			System.out.println(" Indique el tamaño que tendrá que ser mayor que 2");
+			 tam = sc.nextInt();
+			
 		} while (tam <= 2);
 		int[] lista = new int[tam];
 		lista[0] = 0;
