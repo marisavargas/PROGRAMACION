@@ -6,6 +6,7 @@ public class Ejercicio13Arraysplit {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Introduce una palabra, por favor");
 		String palabra = sc.next();
 		String[] letras = palabra.split(""); // esto nos devuelve un array

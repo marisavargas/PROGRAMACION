@@ -2,10 +2,11 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class Ejercicio13Array {
+public class Ejercicio14ArraySplit {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("introduce un numero");
 		String num = sc.nextLine();
 		String espejo = "";
@@ -14,16 +15,13 @@ public class Ejercicio13Array {
 			espejo += parte[i];
 		}
 		if (espejo.equals(num)) {
-			System.out.println("capicua");
+			System.out.println("capicua " + num);
 		} else {
 			System.out.println("no es capicua");
 		}
 		sc.close();
 	}
 
-}
+	}
 
-/*
- * Realizar un programa que solicite al usuario un número e indique si es o no
- * es capicúa
- */
+
