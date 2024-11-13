@@ -10,7 +10,7 @@ public class Ejercicio17Forych {
 			suma += num;
 
 		}
-		System.out.print(suma);
+		System.out.println(suma);
 
 	}
 
