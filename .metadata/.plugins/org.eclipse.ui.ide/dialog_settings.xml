@@ -22,6 +22,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA2"/>
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA_1"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION"/>
 			<item value="C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE"/>
 		</list>

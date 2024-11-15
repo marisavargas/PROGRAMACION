@@ -19,19 +19,30 @@ public class Ejercicio19Arraysplit {
 			rayas[i]= "__ "; /* ojo tenemos que poner un espacio al final*/
 		}
 		do {
-		System.out.println("dame una letra");
+		System.out.println("  dame una letra");
 		String repuesta= sc.nextLine();
+		
 			for (int i = 0; i < rayas.length; i++) {
-				if(letras[i].equals(repuesta)) {
+				
+				if(letras[i].equalsIgnoreCase(repuesta)) {
+					
 				rayas[i]= letras[i];
-			}else {
-				contador++;				
+				
+				}else {
+				
 			}System.out.print(rayas[i]);
-		}
-		}while(!(Arrays.equals(letras,rayas)) && (contador<10));/* comparamos los arrays pero no se utiliza*/
+			
+		}contador++;
+		System.out.println(" te quedan  "+ (10-contador ) +" intentos");
+		
+		}while(!(Arrays.equals(letras,rayas)) || (contador<10));/* comparamos los arrays pero no se utiliza*/
+		
 		  if ( contador == 10) {
+			  
 			  System.out.println(" Game over");
+			  
 		  }else {
+			  
 			  System.out.println(" Ganador ");
 		  }
 		
