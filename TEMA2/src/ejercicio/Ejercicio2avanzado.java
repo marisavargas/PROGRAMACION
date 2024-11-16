@@ -20,6 +20,7 @@ public class Ejercicio2avanzado {
 				}
 			}
 			System.out.println();
-		}
+			
+		}sc.close();
 	}
 }
