@@ -22,18 +22,18 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION"/>
 			<item value="C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE\TEMA3"/>
 			<item value="C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA2"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA_1"/>
-			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="706"/>
-			<item key="DIALOG_Y_ORIGIN" value="26"/>
+			<item key="DIALOG_Y_ORIGIN" value="187"/>
 			<item key="DIALOG_WIDTH" value="525"/>
 			<item key="DIALOG_HEIGHT" value="710"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -49,8 +49,8 @@
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="489"/>
-			<item key="DIALOG_Y_ORIGIN" value="107"/>
+			<item key="DIALOG_X_ORIGIN" value="706"/>
+			<item key="DIALOG_Y_ORIGIN" value="187"/>
 			<item key="DIALOG_WIDTH" value="885"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -61,6 +61,12 @@
 		<item key="DIALOG_Y_ORIGIN" value="138"/>
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="389"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
