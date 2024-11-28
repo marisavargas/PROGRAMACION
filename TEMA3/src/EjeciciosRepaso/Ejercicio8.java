@@ -17,7 +17,8 @@ public class Ejercicio8 {
 			
 			String letras = html[i].substring(posicion + 1);
 			
-			System.out.print(letras);
+			System.out.print(letras +" ");
+			
 
 		}
 		sc.close();
