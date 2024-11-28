@@ -12,14 +12,14 @@ public class Ejercicio10 {
 		String[] nombres = new String[numAlumnos];
 		double[] notasMedias = new double[numAlumnos];
 
-																							// Leer datos de los alumnos//
+		// Leer datos de los alumnos//
 		for (int i = 0; i < numAlumnos; i++) {
 			System.out.println("\nAlumno " + (i + 1) + ":");
 			System.out.print("Nombre: ");
 			nombres[i] = sc.nextLine();
 
 			double sumaNotas = 0;
-
+			sc.nextLine();
 			for (int j = 1; j <= 3; j++) {
 				System.out.print("Nota del examen " + j + ": ");
 				double nota = sc.nextDouble();
@@ -27,8 +27,8 @@ public class Ejercicio10 {
 			}
 
 			sc.nextLine();
-																								// Consumir el salto de línea//
-																								// Calcular la nota media del alumno//
+			// Consumir el salto de línea//
+			// Calcular la nota media del alumno//
 			notasMedias[i] = sumaNotas / 3;
 
 		}
@@ -40,7 +40,7 @@ public class Ejercicio10 {
 			sumaTotalMedias += notasMedias[i];
 		}
 
-																						// Calcular y mostrar la nota media de la clase
+		// Calcular y mostrar la nota media de la clase
 		double mediaClase = sumaTotalMedias / numAlumnos;
 		System.out.println("\nNota media de la clase: " + String.format("%.2f", mediaClase));
 
