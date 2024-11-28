@@ -2,7 +2,7 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class Vicky3 {
+public class vk3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
