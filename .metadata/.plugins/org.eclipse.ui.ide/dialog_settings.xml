@@ -45,6 +45,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA3"/>
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA2"/>
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA_1"/>
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\EXAMENPRIMETRIME"/>
 			<item value="C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE\PROGRAMACION"/>
 			<item value="C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION"/>
