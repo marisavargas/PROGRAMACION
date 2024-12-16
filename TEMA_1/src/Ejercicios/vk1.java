@@ -17,7 +17,7 @@ public class vk1 {
 				System.out.print(array[i] + " ");/* esto es para que los numeros no se impriman juntos */
 				suma += array[i];
 			}
-			System.out.println();
+			System.out.println();/* esto es un salto de espacio*/
 			System.out.println(suma);
 			for (int i = 0; i < array.length; i++) {
 				if (i % 2 == 1) {
