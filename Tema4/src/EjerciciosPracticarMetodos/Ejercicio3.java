@@ -3,10 +3,8 @@ package EjerciciosPracticarMetodos;
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
-		Integer num = 2;
-		String palabra = " hola";
-		String palabraNueva = getMayMin(num, palabra);
-		System.out.println(palabraNueva);
+
+		System.out.println(getMayMin(1, "hola"));
 	}
 
 	public static String getMayMin(Integer num, String palabra) {
