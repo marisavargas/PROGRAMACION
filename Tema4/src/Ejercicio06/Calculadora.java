@@ -22,8 +22,13 @@ public class Calculadora {
 	}
 
 	public static Integer getDivision(Integer num1, Integer num2) {
+		if( num2 == 0) {
+			return 0;
+		}
+		else {
 		Integer Division = num1 / num2;
 		return Division;
+		}
 	}
 
 	public static Integer calcular(String cadena, Integer num1, Integer num2) {
