@@ -1,14 +1,8 @@
 package EjerciciosPracticarMetodos;
 
-public class Ejercicio3 {
+public class Ejercicio4 {
 
 	public static void main(String[] args) {
-		/*Integer num =1;
-		String palabra = " hola";
-		String palabraNueva = getMayMin(num, palabra);
-		System.out.println(palabraNueva);
-		 esto se hace con variable declaradas una a una*/
-		
 		System.out.println(getMayMin(1, "    Buenos dias   "));
 		System.out.println(getMayMin(2, "    Introduccion   "));
 		System.out.println(getMayMin(3, "    Conclusion  "));
@@ -18,11 +12,13 @@ public class Ejercicio3 {
 
 		palabra = palabra.trim();
 		if (num == 1) {
-			return palabra = palabra.toUpperCase();
+			 palabra= Ejercici1.getMayusculas(palabra);
 		} else if (num == 2) {
-			return palabra = palabra.toLowerCase();
-		} else {
+			palabra= Ejercicio2.getMinusculas(palabra);
+		} 
 			return palabra ;
-		}
+		
+
 	}
+
 }

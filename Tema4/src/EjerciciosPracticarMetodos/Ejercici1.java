@@ -3,7 +3,7 @@ package EjerciciosPracticarMetodos;
 public class Ejercici1 {
 
 	public static void main(String[] args) {
-		String parametros ="a";
+		String parametros ="¿ hola qwe tal?    ";
 		String mayusculas= getMayusculas(parametros);// queremos que la vaiable parametros haga la funcion getMayusculas//
 		System.out.println( mayusculas);
 		

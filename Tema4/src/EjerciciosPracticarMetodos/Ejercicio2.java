@@ -5,7 +5,7 @@ public class Ejercicio2 {
 	public static void main(String[] args) {
 		
 		
-		String minusculas= getMinusculas(" hola ¿que tal?");// queremos que la vaiable parametros haga la funcion getMinusculas//
+		String minusculas= getMinusculas(" Hola ¿que tal?    ");// queremos que la vaiable parametros haga la funcion getMinusculas//
 		System.out.println( minusculas);
 		
 	}
