@@ -26,14 +26,14 @@ public static final  String DIV = "DIV";
 		return division;
 	}
 	public Integer getCalcular(Integer num1, Integer num2, String cadena) {
-		if( cadena.equals("ADD")) {
+		if( cadena.equals(ADD)) {
 			return getSuma(num1,num2);
 		}
-		else if (cadena.equals("SUB")) {
+		else if (cadena.equals(SUB)) {
 			return getResta(num1,num2);
 			
 		}
-		else if (cadena.equals("MUL")) {
+		else if (cadena.equals(MUL)) {
 			return getMulti(num1,num2);
 		}
 		else {
