@@ -9542,3 +9542,16 @@ Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
 	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:178)
 	... 73 more
+!SESSION 2025-01-09 13:37:10.596 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE\PROGRAMACION
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-09 13:37:29.888
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-09 13:37:35.649
+!MESSAGE Logback config file: C:\Users\PC\Desktop\PROGRAMACION\PROGRAMACION 1º TRIMESTE\PROGRAMACION\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
