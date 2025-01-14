@@ -30,7 +30,10 @@ public Double getNota() {
 public void setNota(Double nota) {
 	this.nota = nota;
 }
- 
+public void aprobar() { /* este es el ejercicio 19*/
+	this.nota= 5.0;
+}
+  
 
 
 }
