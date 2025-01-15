@@ -33,7 +33,9 @@ public void setNota(Double nota) {
 public void aprobar() { /* este es el ejercicio 19*/
 	this.nota= 5.0;
 }
-  
+public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
+	this.dni= dniAlumno;
+}
 
 
 }
