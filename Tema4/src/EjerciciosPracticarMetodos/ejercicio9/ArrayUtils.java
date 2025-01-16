@@ -16,12 +16,13 @@ public class ArrayUtils {
 	}
 
 	public Integer buscarPalabra(String[] cadena, String palabra) {
-		
+
 		for (int i = 0; i < cadena.length; i++) {
 			if (cadena[i].equalsIgnoreCase(palabra)) {
 				return i;
 			}
 
-		} return -1;
+		}
+		return -1;
 	}
 }
