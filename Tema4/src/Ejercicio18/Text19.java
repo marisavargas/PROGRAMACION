@@ -6,7 +6,7 @@ public class Text19 {
 
 	public static void main(String[] args) {
 
-		Alumno alumno1 = new Alumno();
+		Alumno alumno2 = new Alumno();
 
 		Scanner sc = new Scanner(System.in);
 		
@@ -18,19 +18,19 @@ public class Text19 {
 		Integer edad = sc.nextInt();
 		Double nota = sc.nextDouble();
 
-		alumno1.setDni(dni);
-		alumno1.setNombre(nombre);
-		alumno1.setEdad(edad);
-		alumno1.setNota(nota);
+		alumno2.setDni(dni);
+		alumno2.setNombre(nombre);
+		alumno2.setEdad(edad);
+		alumno2.setNota(nota);
 
-		System.out.println(alumno1.getDni());
-		System.out.println(alumno1.getNombre());
-		System.out.println(alumno1.getEdad());
-		System.out.println(alumno1.getNota());
+		System.out.println(alumno2.getDni());
+		System.out.println(alumno2.getNombre());
+		System.out.println(alumno2.getEdad());
+		System.out.println(alumno2.getNota());
 
 		
-		alumno1.aprobar();
-		System.out.println("Nueva nota : " +alumno1.getNota() );
+		alumno2.aprobar();
+		System.out.println("Nueva nota : " +alumno2.getNota() );
 		sc.close();
 	}
 
