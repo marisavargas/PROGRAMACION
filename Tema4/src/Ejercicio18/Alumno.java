@@ -9,6 +9,10 @@ public class Alumno extends Persona {
 		this.dni= dniAlumno;
 }
  
+public String toString() {
+	return "Alumno [dni=" + dni + ", nota=" + nota + ", curso=" + curso + "]";/* este es el ejercicio 24*/
+}
+
 public Curso getCurso() {
 	return curso;
 }

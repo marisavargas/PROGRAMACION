@@ -5,6 +5,11 @@ protected String nombre;
 protected Integer edad;
 
 
+public Persona(String nombre, Integer edad) {
+	super();
+	this.nombre = nombre;
+	this.edad = edad;
+}
 public String getNombre() {
 	return nombre;
 }

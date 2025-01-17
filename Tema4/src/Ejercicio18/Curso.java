@@ -3,7 +3,8 @@ package Ejercicio18;
 public class Curso {
 	private String identificador;
 	private String descripcion;
-		
+	
+	
 	public String getIdentificador() {
 		return identificador;
 	}
