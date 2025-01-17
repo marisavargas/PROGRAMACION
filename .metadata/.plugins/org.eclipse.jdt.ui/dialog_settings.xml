@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="clean_up_save_particpant_modify_dialog.preferred_width" value="933"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_height" value="1032"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_x" value="494"/>
+	<item key="clean_up_save_particpant_modify_dialog.preferred_y" value="0"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="quick_assist_proposal_size">

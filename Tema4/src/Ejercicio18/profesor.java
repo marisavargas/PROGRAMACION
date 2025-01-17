@@ -5,7 +5,10 @@ public class profesor  extends Persona{
  
 
 public String toString() {
-	return "profesor [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + "]";/* ejrcicio 23*/
+	return "profesor [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + "]";/* ejercicio 23*/
+}
+public profesor() {
+	
 }
 
 public profesor(String nombre, Integer edad,String dni) {
