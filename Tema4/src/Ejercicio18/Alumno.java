@@ -1,28 +1,27 @@
 package Ejercicio18;
 
-public class Alumno {
+public class Alumno extends Persona {
  private String dni;
- private String nombre;
- private Integer edad;
  private Double nota;
+ private Curso curso;  /* este es el ejercicio21*/
+
+ public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
+		this.dni= dniAlumno;
+}
  
+public Curso getCurso() {
+	return curso;
+}
+
+public void setCurso(Curso curso) {
+	this.curso = curso;
+}
+
 public String getDni() {
 	return dni;
 }
 public void setDni(String dni) {
 	this.dni = dni;
-}
-public String getNombre() {
-	return nombre;
-}
-public void setNombre(String nombre) {
-	this.nombre = nombre;
-}
-public Integer getEdad() {
-	return edad;
-}
-public void setEdad(Integer edad) {
-	this.edad = edad;
 }
 public Double getNota() {
 	return nota;
@@ -33,9 +32,7 @@ public void setNota(Double nota) {
 public void aprobar() { /* este es el ejercicio 19*/
 	this.nota= 5.0;
 }
-public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
-	this.dni= dniAlumno;
-}
+
 
 
 }
