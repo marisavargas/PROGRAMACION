@@ -3,7 +3,7 @@ package Ejercicio18;
 public class Alumno extends Persona {
  private String dni;
  private Double nota;
- private Curso curso;  /* este es el ejercicio21*/
+ private Curso curso;  /* este es el ejercicio22*/
 
  public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
 		this.dni= dniAlumno;
