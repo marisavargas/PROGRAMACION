@@ -27,7 +27,7 @@ public class Test18 {
 		System.out.println(alumno1.getEdad());
 		System.out.println(alumno1.getNota());
 
-		
+		sc.close();
 		
 	}
 
