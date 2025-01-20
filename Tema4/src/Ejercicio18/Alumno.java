@@ -3,6 +3,7 @@ package Ejercicio18;
 import java.util.Objects;
 
 public class Alumno extends Persona {
+<<<<<<< HEAD
 	private String dni;
 	private Double nota;
 	private Curso curso; /* este es el ejercicio22 */
@@ -14,6 +15,23 @@ public class Alumno extends Persona {
 		
 	}
 	
+=======
+ private String dni;
+ private Double nota;
+ private Curso curso;  /* este es el ejercicio22*/
+
+ public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
+		this.dni= dniAlumno;
+}
+ 
+public String toString() {
+	return "Alumno [dni=" + dni + ", nota=" + nota + ", curso=" + curso + "]";/* este es el ejercicio 24*/
+}
+
+public Curso getCurso() {
+	return curso;
+}
+>>>>>>> e39518abbeed115ff721d997bab3ddc54ad44751
 
 	@Override
 	public String toString() {

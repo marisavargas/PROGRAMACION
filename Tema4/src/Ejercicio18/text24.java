@@ -8,7 +8,10 @@ public class text24 {
 		p1.setNombre("pepe");
 		p1.setEdad(48);
 		System.out.println(p1);
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e39518abbeed115ff721d997bab3ddc54ad44751
 
 	}
 
