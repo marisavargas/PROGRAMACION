@@ -3,8 +3,7 @@ package Ejercicio18;
 import java.util.Objects;
 
 public class Alumno extends Persona {
-<<<<<<< HEAD
-	private String dni;
+	private String dni ;
 	private Double nota;
 	private Curso curso; /* este es el ejercicio22 */
 
@@ -15,23 +14,6 @@ public class Alumno extends Persona {
 		
 	}
 	
-=======
- private String dni;
- private Double nota;
- private Curso curso;  /* este es el ejercicio22*/
-
- public  Alumno (String dniAlumno) {  /* este es el ejercicio 20*/
-		this.dni= dniAlumno;
-}
- 
-public String toString() {
-	return "Alumno [dni=" + dni + ", nota=" + nota + ", curso=" + curso + "]";/* este es el ejercicio 24*/
-}
-
-public Curso getCurso() {
-	return curso;
-}
->>>>>>> e39518abbeed115ff721d997bab3ddc54ad44751
 
 	@Override
 	public String toString() {
@@ -43,9 +25,10 @@ public Curso getCurso() {
 	public int hashCode() {
 		return Objects.hash(dni);
 	}
-
-
-
+	public boolean validarDni( String dni) {  /*ejercicio27*/
+	return (dni != null && dni.length()==9);
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,9 +40,7 @@ public Curso getCurso() {
 		Alumno other = (Alumno) obj;
 		return Objects.equals(dni, other.dni);
 	}
-
-
-
+	
 	public Curso getCurso() {
 		return curso;
 	}
@@ -73,7 +54,7 @@ public Curso getCurso() {
 	}
 
 	public void setDni(String dni) {
-		this.dni = dni;
+		this.dni = dni.toUpperCase();/* ejercicio 26*/
 	}
 
 	public Double getNota() {
