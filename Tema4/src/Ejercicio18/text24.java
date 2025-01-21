@@ -3,15 +3,14 @@ package Ejercicio18;
 public class text24 {
 
 	public static void main(String[] args) {
-		profesor p1= new profesor();
+		Profesor p1= new Profesor();
 		p1.setDni("48806354D");
 		p1.setNombre("pepe");
 		p1.setEdad(48);
 		System.out.println(p1);
-<<<<<<< HEAD
+
 		
-=======
->>>>>>> e39518abbeed115ff721d997bab3ddc54ad44751
+
 
 	}
 

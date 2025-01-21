@@ -15,6 +15,7 @@ public class Test23 {
 		Profesor profesor = new Profesor(nombre, edad,dni);
 		
 		System.out.println(profesor.toString());
+		sc.close();
 	}
 
 }

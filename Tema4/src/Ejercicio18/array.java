@@ -5,39 +5,61 @@ import java.util.Scanner;
 public class array {
 
 	public static void main(String[] args) {
-		Alumno[] alumno = new Alumno[3];
+		Alumno[] alumnos = new Alumno[3];
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Indica nombre, edad y nota de tres alumnos");
-		String dni = sc.nextLine();
-		String nombre = sc.nextLine();
-		Integer edad = sc.nextInt();
-		Double nota = sc.nextDouble();
-		
 		Curso c = new Curso();
 		c.setDescripcion("DAM/DAW");
 		c.setIdentificador("1");
 		
-		Alumno a1 = new Alumno(dni);
-		a1.setNombre(nombre);
-		a1.setEdad(edad);
-		a1.setNota(nota);
-		a1.setCurso(c);
 
-		Alumno a2 = new Alumno(dni);
-		a2.setNombre(nombre);
-		a2.setEdad(edad);
-		a2.setNota(nota);
-		a2.setCurso(c);
 
-		Alumno a3 = new Alumno(dni);
-		a3.setNombre(nombre);
-		a3.setEdad(edad);
-		a3.setNota(nota);
-		a3.setCurso(c);
-		for (int i = 0; i < alumno.length; i++) {
-			/* terminar en casa*/
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < alumnos.length; i++) {
+			Alumno alum = new Alumno();
+						
+				Boolean dniCorrecto = false;  /* ejercicio27 boolean*/
+				do {
+					System.out.println("Dime el dni");
+					String dni = sc.nextLine();
+					alum = new Alumno(dni);
+					if (!alum.validarDni(alum.getDni())) {
+						System.err.println("Dni no valido");
+					}
+					else {
+						dniCorrecto = true;
+					}
+				}while(!dniCorrecto);
+
+			System.out.println("Indica el nombre del alumno");
+			alum.setNombre(sc.nextLine());
+
+			System.out.println("Indica el nombre del nota");
+			alum.setNota(sc.nextDouble());
+
+			System.out.println("Indica la dni");
+			alum.setDni(sc.nextLine());
+
+			System.out.println("Indica la edad");
+			alum.setEdad(sc.nextInt());
+
+			alum.setCurso(c);
+			alumnos [i] = alum;
+				
 		}
+		for (Alumno alumno : alumnos) {/* hacemos un foreach porque no queremos que se salte nimguna pocicion*/
+			System.out.println(alumno);
 			
+		}
+		if (alumnos[0].equals(alumnos[1]) 
+				|| alumnos[0].equals(alumnos[2])
+				|| alumnos[1].equals(alumnos[2])) {
+			System.err.println("Error: hay al menos 2 alumnos repetidos");
+		}
+		else {
+			System.out.println("Felicidades: todos los alumnos son distintos!!");
+		}
+		sc.close();
+
 	}
+
 }
