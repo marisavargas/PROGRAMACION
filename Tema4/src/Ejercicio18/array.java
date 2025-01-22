@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class array {
 
 	public static void main(String[] args) {
-		Alumno[] alumnos = new Alumno[3];
+		
+		Alumno[] alumnos = new Alumno[3];/* ejercicio 25*/
 
 		Curso c = new Curso();
 		c.setDescripcion("DAM/DAW");
@@ -17,7 +18,7 @@ public class array {
 		for (int i = 0; i < alumnos.length; i++) {
 			Alumno alum = new Alumno();
 						
-				Boolean dniCorrecto = false;  /* ejercicio27 boolean*/
+				Boolean dniCorrecto = false;  /* ejercicio27 Y 28 boolean*/
 				do {
 					System.out.println("Dime el dni");
 					String dni = sc.nextLine();
@@ -48,6 +49,12 @@ public class array {
 		}
 		for (Alumno alumno : alumnos) {/* hacemos un foreach porque no queremos que se salte nimguna pocicion*/
 			System.out.println(alumno);
+			if(alumno.validar()) {/* ejercicio29*/
+				System.out.println("Este alumno cumple las validaciones");
+			}
+			else {
+				System.out.println("Este alumno no cumple las validaciones");
+			}
 			
 		}
 		if (alumnos[0].equals(alumnos[1]) 
