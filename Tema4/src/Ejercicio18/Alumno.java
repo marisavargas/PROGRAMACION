@@ -19,9 +19,9 @@ public class Alumno extends Persona {
 
 	}
 	private Curso (Integer numAlumnos) {  /* ejercicio 30 terminar en casa*/
-		alumnos = new Alumnos();
+		 Alumno [] alumnos  = new Alumno(3);
 	}
-
+ 
 	public Curso getCurso() {
 		return curso;
 	}
