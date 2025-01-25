@@ -1,13 +1,14 @@
 package Ejercicio18;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class array {
+public class Text35 {
 
 	public static void main(String[] args) {
 		
-		Alumno[] alumnos = new Alumno[3];/* ejercicio 25*/
-
+		List<Alumno> alumnos=new ArrayList<>();
 		Curso c = new Curso();
 		c.setDescripcion("DAM/DAW");
 		c.setIdentificador("1");
@@ -15,10 +16,10 @@ public class array {
 
 
 		Scanner sc = new Scanner(System.in);
-		for (int i = 0; i < alumnos.length; i++) {
+		for (int i = 0; i < 3 ; i++) {
 			Alumno alum = new Alumno();
 						
-				Boolean dniCorrecto = false;  /* ejercicio27 Y 28 boolean*/
+				Boolean dniCorrecto = false;  
 				do {
 					System.out.println("Dime el dni");
 					String dni = sc.nextLine();
@@ -44,7 +45,7 @@ public class array {
 			alum.setEdad(sc.nextInt());
 
 			alum.setCurso(c);
-			alumnos [i] = alum;
+			alumnos.add( alum);
 				
 		}
 		for (Alumno alumno : alumnos) {/* hacemos un foreach porque no queremos que se salte nimguna pocicion*/
@@ -58,9 +59,9 @@ public class array {
 			}
 			
 		}
-		if (alumnos[0].equals(alumnos[1]) 
-				|| alumnos[0].equals(alumnos[2])
-				|| alumnos[1].equals(alumnos[2])) {
+		if (alumnos.get(0).equals(alumnos.get(1)) 
+				|| alumnos.get(0).equals(alumnos.get(2))
+				|| alumnos.get(1).equals(alumnos.get(2))) {
 			System.err.println("Error: hay al menos 2 alumnos repetidos");
 		}
 		else {
@@ -70,4 +71,8 @@ public class array {
 
 	}
 
-}
+
+
+	}
+
+

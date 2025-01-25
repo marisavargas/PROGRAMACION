@@ -8,20 +8,14 @@ public class Alumno extends Persona {
 	private String dni;
 	private Double nota;
 	private Curso curso; /* este es el ejercicio22 */
-	private Alumno [] alumnos;  /* ejercicio 30*/
-
+	  
 	public Alumno(String dni) { /* este es el ejercicio 20 */
 		this.dni = dni;
 		;
 	}
-
 	public Alumno() {
-
 	}
-	private Curso (Integer numAlumnos) {  /* ejercicio 30 terminar en casa*/
-		 Alumno [] alumnos  = new Alumno(3);
-	}
- 
+	 
 	public Curso getCurso() {
 		return curso;
 	}
