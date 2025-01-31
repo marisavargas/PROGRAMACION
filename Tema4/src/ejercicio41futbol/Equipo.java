@@ -10,8 +10,9 @@ public class Equipo {
 	private List<Jugador> jugadores;
 
 	public Equipo(String nombre) {
-		jugadores = new ArrayList<Jugador>();
 		this.nombre = nombre;
+		jugadores = new ArrayList<Jugador>();
+		
 	}
 
 	public String getNombre() {
@@ -57,7 +58,7 @@ public class Equipo {
 
 	@Override
 	public String toString() {
-		return nombre + "- capitan=" + capitan + ", jugadores=" + jugadores;
+		return nombre + "- capitan=" + capitan.getNombre() + ", jugadores=" + jugadores();
 	}
 
 }
