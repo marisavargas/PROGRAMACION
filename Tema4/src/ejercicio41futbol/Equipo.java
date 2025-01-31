@@ -1,5 +1,6 @@
 package ejercicio41futbol;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,7 +10,7 @@ public class Equipo {
 	private List<Jugador> jugadores;
 
 	public Equipo(String nombre) {
-		super();
+		jugadores = new ArrayList<Jugador>();
 		this.nombre = nombre;
 	}
 
