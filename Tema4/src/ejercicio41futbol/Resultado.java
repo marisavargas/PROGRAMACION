@@ -11,6 +11,35 @@ public Resultado() {
 	this.golesLocales=0;
 	this.golesVisitantes=0;
 }
+public Boolean isVictoriaLocal() {
+	if(golesLocales>golesVisitantes) {
+		return true;
+	}return false;
+}
+public Boolean isVictoriaVisitante() {
+	if(golesLocales<golesVisitantes) {
+		return true;
+	}return false;
+}
+public Boolean isEmpate() {
+	if(golesLocales==golesVisitantes) {
+		return true;
+	}return false;
+}
+
+public Integer getGolesLocales() {
+	return golesLocales;
+}
+public void setGolesLocales(Integer golesLocales) {
+	this.golesLocales = golesLocales;
+}
+public Integer getGolesVisitantes() {
+	return golesVisitantes;
+}
+public void setGolesVisitantes(Integer golesVisitantes) {
+	this.golesVisitantes = golesVisitantes;
+}
+
 
 @Override
 public int hashCode() {
@@ -29,18 +58,6 @@ public boolean equals(Object obj) {
 	return Objects.equals(golesLocales, other.golesLocales) && Objects.equals(golesVisitantes, other.golesVisitantes);
 }
 
-public Integer getGolesLocales() {
-	return golesLocales;
-}
-public void setGolesLocales(Integer golesLocales) {
-	this.golesLocales = golesLocales;
-}
-public Integer getGolesVisitantes() {
-	return golesVisitantes;
-}
-public void setGolesVisitantes(Integer golesVisitantes) {
-	this.golesVisitantes = golesVisitantes;
-}
 
 @Override
 public String toString() {

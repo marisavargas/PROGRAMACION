@@ -6,12 +6,22 @@ private Equipo equipoVisitante;
 private Resultado resultado;
 
 
-public Pastido(Equipo equipoLocal, Equipo equipoVisitante, Resultado resultado) {
-	super();
-	this.equipoLocal = equipoLocal;
-	this.equipoVisitante = equipoVisitante;
-	this.resultado = resultado;
+public Pastido() {
+	
 }
+public Equipo equipoGanador() {
+	if(resultado.isVictoriaLocal()) {
+		return equipoLocal;
+	}
+	else if(resultado.isVictoriaVisitante()) {
+		return equipoVisitante;
+	
+	}else  {
+		return null;
+	}
+	
+}
+
 public Equipo getEquipoLocal() {
 	return equipoLocal;
 }
@@ -29,6 +39,10 @@ public Resultado getResultado() {
 }
 public void setResultado(Resultado resultado) {
 	this.resultado = resultado;
+}
+@Override
+public String toString() {
+	return  equipoLocal   + " vs." + equipoVisitante + resultado;
 }
 
 }
