@@ -41,7 +41,7 @@ public class Text41 {
 			sc.nextLine();
 			Jugador jugador = new Jugador (nombre,dorsal);
 			equipo.getJugadores().add(jugador);
-			if(i==1) {
+			if(i==0) {
 				equipo.setCapitan(jugador);
 			}
 		}return equipo;
