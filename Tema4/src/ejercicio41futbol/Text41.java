@@ -27,8 +27,10 @@ public class Text41 {
 		Jugador jugadorCapitan = equipoLocal.getJugadores().get(equipoLocal.getJugadores().size()-1);
 		equipoLocal.setCapitan(jugadorCapitan);
 		System.out.println(equipoLocal);
-		Equipo.setCompeticion("liga nacional");  /*ejrcicio42*/
+		Equipo.setCompeticion("liga nacional");  /*ejercicio42*/
 		System.out.println(equipoVisitante);
+		Equipo.setCompeticion("Copa internacional");
+		System.out.println(equipoLocal);
 		sc.close();
 	}
 	private static Equipo crearEquipo (Scanner sc) {

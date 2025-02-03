@@ -11,10 +11,7 @@ public class Equipo {
 	private List<Jugador> jugadores;
 
 	public Equipo(String nombre) {
-<<<<<<< HEAD
 		jugadores=  new ArrayList<>();
-=======
->>>>>>> 90d4c0a41e0be9f07da04b8fdcc077c8b355a587
 		this.nombre = nombre;
 		jugadores = new ArrayList<Jugador>();
 		
@@ -70,11 +67,14 @@ public class Equipo {
 
 	@Override
 	public String toString() {
-<<<<<<< HEAD
-		return nombre + "- capitan=" + capitan + ", jugadores=" + jugadores + competicion;
-=======
-		return nombre + "- capitan=" + capitan.getNombre() + ", jugadores=" + jugadores();
->>>>>>> 90d4c0a41e0be9f07da04b8fdcc077c8b355a587
+		return nombre + "- capitan=" + capitan.getNombre() + ", jugadores=" + jugadores + competicion; /* ejercicio42*/
+
+		
+	}
+	@SuppressWarnings("unused")
+	private String jugador() {
+		
+		return null;
 	}
 
 }
