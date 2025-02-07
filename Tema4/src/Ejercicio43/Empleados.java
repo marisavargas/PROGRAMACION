@@ -5,9 +5,20 @@ public abstract class Empleados {
 	public static final Integer SUELDOGUION = 50000;
 	public static final Integer SUELDODIREC = 200000;
 
-	private String nombre;
-	private String fecha_Nacimiento;
-	private String nacionalidas;
+	protected String nombre;
+	protected Integer fecha_Nacimiento;
+	protected String nacionalidas;
+	public Empleados() {
+		
+	}
+	
+	public Empleados(String nombre, Integer fecha_Nacimiento, String nacionalidas) {
+		super();
+		this.nombre = nombre;
+		this.fecha_Nacimiento = fecha_Nacimiento;
+		this.nacionalidas = nacionalidas;
+	}
+
 	public abstract  Integer getSueldo();
 	
 	public String getNombre() {
@@ -18,11 +29,11 @@ public abstract class Empleados {
 		this.nombre = nombre;
 	}
 
-	public String getFecha_Nacimiento() {
+	public Integer getFecha_Nacimiento() {
 		return fecha_Nacimiento;
 	}
 
-	public void setFecha_Nacimiento(String fecha_Nacimiento) {
+	public void setFecha_Nacimiento(Integer fecha_Nacimiento) {
 		this.fecha_Nacimiento = fecha_Nacimiento;
 	}
 

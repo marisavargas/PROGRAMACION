@@ -49,6 +49,6 @@ public class Reloj {
 
 	}
 	public boolean check(Integer horas,Integer minutos, Integer segundos) {
-		if(hora>0 )
+		if(hora>00)
 	}
 }
