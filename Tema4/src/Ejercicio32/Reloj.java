@@ -7,13 +7,13 @@ public class Reloj {
 	public boolean formato24Horas;
 
 	public Reloj() {
-		horas = 00;
-		minutos = 00;
-		segundos = 00;
-		formato24Horas = true;
+		this.horas = 0;
+		this.minutos = 0;
+		this.segundos = 0;
+		this.formato24Horas = true;
 	}
 
-	public Reloj(Integer horas, Integer minutos, Integer segundos, boolean formato24horas) {
+	public Reloj(Integer horas, Integer minutos, Integer segundos) {
 		super();
 		this.horas = horas;
 		this.minutos = minutos;
@@ -42,13 +42,29 @@ public class Reloj {
 	}
 
 	public void ponerEnHoraA(Integer horas, Integer minutos) {
-
+			this.horas=horas;
+			this.minutos=minutos;
+			
 	}
 
-	public void ponerEmHoraB(Integer horas, Integer minutos, Integer Segundos) {
+	public void ponerEmHoraB(Integer horas, Integer minutos, Integer Segundos, Integer segundos) {
+		this.horas=horas;
+		this.minutos=minutos;
+		this.segundos=segundos;
+	}
+	public boolean check() {
+		if(horas>23 || horas<0) {
+			return false;
+		}
+		if(minutos>59 || minutos<0) {
+			return false;
+		}
+		if(segundos>59 || segundos<0) {
+			return false;
+		}	
+			return true;
+	}
 
-	}
-	public boolean check(Integer horas,Integer minutos, Integer segundos) {
-		if(hora>00)
-	}
+	
+	
 }

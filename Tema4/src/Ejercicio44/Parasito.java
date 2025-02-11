@@ -1,19 +1,18 @@
 package Ejercicio44;
 
-public class Parasito extends Jugador {
-Integer codigoPara;
-Integer puntoVidaPara;
-public Integer getCodigoPara() {
-	return codigoPara;
+public class Parasito extends Personaje {
+public static final Integer VIDAS=200;
+public static final Integer PUNTOS=2;
+public static final Integer SEGUNDOS=1;
+
+public static Integer getSegundos() {
+	return SEGUNDOS;
 }
-public void setCodigoPara(Integer codigoPara) {
-	this.codigoPara = codigoPara;
+public static Integer getVidas() {
+	return VIDAS;
 }
-public Integer getPuntoVidaPara() {
-	return puntoVidaPara;
-}
-public void setPuntoVidaPara(Integer puntoVidaPara) {
-	this.puntoVidaPara = puntoVidaPara;
+public static Integer getPuntos() {
+	return PUNTOS;
 }
 
 }
