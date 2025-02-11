@@ -4,29 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EquipoCombate {
-public List <Personaje> EquipoCombate;
-private Integer totalPuntosVida;
+	private List<Personaje> equipo;
+	public EquipoCombate() {
+		equipo= new ArrayList<>();
+	}
 
-public EquipoCombate() {
-	EquipoCombate = new ArrayList<>();
-	totalPuntosVida=0; 
-}
+	public void añadirPersonaje(Personaje perso) {
+		if (equipo.size() >= 5 || equipo.contains(perso)) {
 
+		} else {
+			equipo.add(perso);
 
-public List<Personaje> getEquipoCombate() {
-	return EquipoCombate;
-}
+		}
+	}
 
-public void setEquipoCombate(List<Personaje> equipoCombate) {
-	EquipoCombate = equipoCombate;
-}
+	public Integer getVidas() {
+		Integer masVida = 0;
+		for (int i = 0; i < equipo.size(); i++) {
+			masVida = masVida + equipo.get(i).getVida();
+		}
+		return masVida;
+	}
 
-public Integer getTotalPuntosVida() {
-	return totalPuntosVida;
-}
-
-public void setTotalPuntosVida(Integer totalPuntosVida) {
-	this.totalPuntosVida = totalPuntosVida;
-}
-
+	@Override
+	public String toString() {
+		return "EquipoCombate [equipo=" + equipo + "]";
+	}
+	
 }

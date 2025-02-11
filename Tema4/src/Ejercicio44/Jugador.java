@@ -3,6 +3,12 @@ package Ejercicio44;
 public class Jugador {
 	private String nombre;
 	public EquipoCombate equipo;
+    
+	public Jugador(String nombre, EquipoCombate equipo) {
+		super();
+		this.nombre = nombre;
+		this.equipo = equipo;
+	}
 
 	public String getNombre() {
 		return nombre;
