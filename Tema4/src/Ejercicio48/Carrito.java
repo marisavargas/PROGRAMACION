@@ -1,21 +1,22 @@
-package Ejercicio47;
+package Ejercicio48;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Carrito {
+
 	protected LocalDate fecha_Creacion;
 	protected LocalDate fecha_Actulizacion;
-	private Cliente clienteNuevo;
-	private List<Articulo> listaArticulo;
+	private Ciente clienteNuevo;
+	private Set<Articulo> listaArticulo;
 
-	public Carrito(Cliente clienteNuevo) {
+	public Carrito(Ciente clienteNuevo) {
 		this.clienteNuevo = clienteNuevo;
 		fecha_Creacion = LocalDate.now();
 		fecha_Actulizacion = LocalDate.now();
-		listaArticulo = new ArrayList<>();
+		listaArticulo = new HashSet<>();
 	}
 
 	public Integer getCantidad() {
@@ -25,11 +26,11 @@ public class Carrito {
 
 	public Double precioTotal() {
 		Double precioTotal = 0.0;
-		for (int i = 0; i < listaArticulo.size(); i++) {
-			precioTotal = listaArticulo.get(i).getPrecio();
-
+		for (Articulo articulo : listaArticulo) {
+			precioTotal += articulo.getPrecio();
 		}
 		return precioTotal;
+
 	}
 
 	public Double getPrecioMedio() {
@@ -39,11 +40,11 @@ public class Carrito {
 		return 0.0;
 	}
 
-	public Cliente getClienteNuevo() {
+	public Ciente getClienteNuevo() {
 		return clienteNuevo;
 	}
 
-	public void setClienteNuevo(Cliente clienteNuevo) {
+	public void setClienteNuevo(Ciente clienteNuevo) {
 		this.clienteNuevo = clienteNuevo;
 	}
 
@@ -63,37 +64,37 @@ public class Carrito {
 		this.fecha_Actulizacion = fecha_Actulizacion;
 	}
 
-	public List<Articulo> getListaArticulo() {
+	public Set<Articulo> getListaArticulo() {
 		return listaArticulo;
 	}
 
-	public void setListaArticulo(List<Articulo> listaArticulo) {
+	public void setListaArticulo(Set<Articulo> listaArticulo) {
 		this.listaArticulo = listaArticulo;
 	}
+
 	@Override
 	public String toString() {
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		return "Cliente: " + clienteNuevo.getDni() + " / " + clienteNuevo.getNombre()
-			+ " Artculos: " + getCantidad() + " / " + precioTotal() + " euros"
-			+ " Fecha ltima actualizacin :" + fecha_Creacion.format(formato);
+		return "Cliente: " + clienteNuevo.getDni() + " / " + clienteNuevo.getNombre() + " Artculos: " + getCantidad()
+				+ " / " + precioTotal() + " euros" + " Fecha ltima actualizacin :" + fecha_Creacion.format(formato);
 	}
-	
+
 	public void addArticulo(Articulo arti) {
 		listaArticulo.add(arti);
 		fecha_Creacion = LocalDate.now();
 	}
-	
-	public void borrarArticulo(int posicion) {
-		
+
+	public void borrarArticulo(String nombre) {
+
 		// hay que comprobar si la posicion es correcta:
-		
-		if(posicion >= 0 && posicion<this.listaArticulo.size()) // posicion < getCantidad()
+
+		if (!listaArticulo.isEmpty()) // < getCantidad()
 		{
-			listaArticulo.remove(posicion);
+			listaArticulo.remove(nombre);
 			fecha_Creacion = LocalDate.now();
 		}
 	}
-	
+
 	public void vaciarCesta() {
 		listaArticulo.clear();
 		fecha_Creacion = LocalDate.now();

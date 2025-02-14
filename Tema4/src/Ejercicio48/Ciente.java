@@ -1,7 +1,7 @@
-package Ejercicio47;
+package Ejercicio48;
 
-public class Cliente  {
-	 private String dni;
+public class Ciente {
+	private String dni;
 	 private String nombre;
 	public String getDni() {
 		return dni;
@@ -15,6 +15,5 @@ public class Cliente  {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
 	
 }
