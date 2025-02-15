@@ -1,6 +1,6 @@
 package Ejercicio48;
 
-public class Ropa {
+public class Ropa extends Articulo {
 	private String talla;
 	 private String color;
 	public String getTalla() {

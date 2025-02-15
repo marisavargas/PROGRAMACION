@@ -3,7 +3,7 @@ package Ejercicio48;
 public class Text48 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		// 1
 		Ciente cliente = new Ciente();
 		cliente.setDni("12345678X");
@@ -30,7 +30,7 @@ public class Text48 {
 		carrito.addArticulo(nietzsche);
 		System.out.println(carrito);
 		// 7
-		carrito.borrarArticulo(1);
+		carrito.borrarArticulo(nietzsche);
 		System.out.println(carrito);
 		// 8
 		System.out.println(carrito.getPrecioMedio());

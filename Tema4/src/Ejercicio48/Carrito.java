@@ -35,9 +35,9 @@ public class Carrito {
 
 	public Double getPrecioMedio() {
 		if (getCantidad() == 0) {
-
+			return 0.0;
 		}
-		return 0.0;
+		return precioTotal() / getCantidad();
 	}
 
 	public Ciente getClienteNuevo() {
@@ -84,13 +84,13 @@ public class Carrito {
 		fecha_Creacion = LocalDate.now();
 	}
 
-	public void borrarArticulo(String nombre) {
+	public void borrarArticulo(Articulo borrarArticulo) {
 
-		// hay que comprobar si la posicion es correcta:
+		
 
-		if (!listaArticulo.isEmpty()) // < getCantidad()
+		if (!listaArticulo.isEmpty() && listaArticulo.contains(borrarArticulo)) 
 		{
-			listaArticulo.remove(nombre);
+			listaArticulo.remove(borrarArticulo);
 			fecha_Creacion = LocalDate.now();
 		}
 	}

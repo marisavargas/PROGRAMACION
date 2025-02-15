@@ -34,9 +34,10 @@ public class Carrito {
 
 	public Double getPrecioMedio() {
 		if (getCantidad() == 0) {
-
+			return 0.0;
 		}
-		return 0.0;
+		return precioTotal()/getCantidad();
+		
 	}
 
 	public Cliente getClienteNuevo() {
