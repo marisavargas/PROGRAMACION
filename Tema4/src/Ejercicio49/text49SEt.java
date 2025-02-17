@@ -11,9 +11,11 @@ public class text49SEt {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(" indique cinco cadenas");
 		Set<String> cadenas = new HashSet<>();
-		for (int i = 0; i < 5; i++) {
-			cadenas.add(sc.nextLine().toUpperCase());
-
+		
+		Set<String>auxiliar = new HashSet<>();
+		for (String string : auxiliar) {
+			String cadenaMay = ((String) cadenas).toUpperCase();
+			auxiliar.add(cadenaMay);
 		}
 		System.out.println(cadenas);
 		if( cadenas.contains("")) {
@@ -27,7 +29,7 @@ public class text49SEt {
 				iterador.remove();
 			}
 		}System.out.println(cadenas);
-			
+		sc.close();	
 		}
 		
 }

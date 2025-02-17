@@ -88,9 +88,8 @@ public class Carrito {
 
 		
 
-		if (!listaArticulo.isEmpty() && listaArticulo.contains(borrarArticulo)) 
-		{
-			listaArticulo.remove(borrarArticulo);
+		if (listaArticulo.remove(borrarArticulo)){
+			
 			fecha_Creacion = LocalDate.now();
 		}
 	}
