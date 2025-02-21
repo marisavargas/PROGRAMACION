@@ -20,8 +20,8 @@ public class Text50 {
 		System.out.println(pais);
 		Iterator<Pais> it = pais.iterator();
 		while(it.hasNext()){
-			Pais pais = it.next();
-			if(!pais.getCodigo().equals("ES")) {
+			Pais paises = it.next();
+			if(!paises.getCodigo().equals("ES")) {
 				it.remove();
 			}
 		}System.out.println(pais);

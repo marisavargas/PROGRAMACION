@@ -13,8 +13,8 @@ public class text49SEt {
 		Set<String> cadenas = new HashSet<>();
 		
 		Set<String>auxiliar = new HashSet<>();
-		for (String string : auxiliar) {
-			String cadenaMay = ((String) cadenas).toUpperCase();
+		for (String cadena : auxiliar) {
+			String cadenaMay = (cadena).toUpperCase();
 			auxiliar.add(cadenaMay);
 		}
 		System.out.println(cadenas);
