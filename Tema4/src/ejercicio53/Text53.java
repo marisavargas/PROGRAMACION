@@ -8,6 +8,7 @@ public class Text53 {
 		Hucha hucha = new Hucha();
 		BigDecimal hucha = BigDecimal.ZERO;
 		System.out.println(hucha);
+		hucha.
 		
-
+	}
 }

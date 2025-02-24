@@ -17,17 +17,17 @@ public class Hucha {
 		return ahorrado;
 	}
 
-	public BigDecimal sacarDinero(BigDecimal z) {
+	public BigDecimal sacarDinero(BigDecimal dinero) {
 		
 	
-		if(ahorrado.compareTo(z)<=0) {
-		ahorrado= ahorrado.subtract(z);
+		if(ahorrado.compareTo(dinero)>0) {
+		ahorrado= ahorrado.subtract(dinero);
 	
 		return ahorrado=  BigDecimal.ZERO;
 		
 	}else {
 		
-		return ahorrado= ahorrado.subtract(z);
+		return ahorrado= ahorrado.subtract(dinero);
 	
 	}
 
@@ -37,7 +37,6 @@ public class Hucha {
 	}
 
 	public BigDecimal romperHucha() {
-		BigDecimal j =  BigDecimal.ZERO;
 		
 		
 		return ahorrado;
