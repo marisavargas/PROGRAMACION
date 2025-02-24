@@ -38,10 +38,11 @@ public class bigDecimal51 {
 			
 			suma= suma.add(numUsuario.get(i));
 		}
+		System.out.println("lista de numeros :" + numUsuario);
 		BigDecimal redondeador = suma.setScale(2,RoundingMode.HALF_DOWN);
-		System.out.println(redondeador);
+		System.out.println( "suma redondeada" +redondeador);
 		BigDecimal division = numUsuario.get(0).divide(numUsuario.get(1),3,RoundingMode.HALF_UP);
-		System.out.println(division);
+		System.out.println( "division" + division);
 		sc.close();
 	}
 

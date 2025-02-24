@@ -38,8 +38,9 @@ public class Carrito {
 		if (getCantidad() == 0) {
 			return BigDecimal.ZERO;
 		}
-		return precioTotal().divide(new BigDecimal (getCantidad ()),2,RoundingMode.HALF_UP);
-		
+		BigDecimal cantidad = new BigDecimal(getCantidad());
+		return precioTotal().divide(new BigDecimal(getCantidad()), 2, RoundingMode.HALF_UP);
+
 	}
 
 	public Cliente getClienteNuevo() {
@@ -73,30 +74,26 @@ public class Carrito {
 	public void setListaArticulo(List<Articulo> listaArticulo) {
 		this.listaArticulo = listaArticulo;
 	}
+
 	@Override
 	public String toString() {
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		return "Cliente: " + clienteNuevo.getDni() + " / " + clienteNuevo.getNombre()
-			+ " Artculos: " + getCantidad() + " / " + precioTotal() + " euros"
-			+ " Fecha ltima actualizacin :" + fecha_Creacion.format(formato);
+		return "Cliente: " + clienteNuevo.getDni() + " / " + clienteNuevo.getNombre() + " Artculos: " + getCantidad()
+				+ " / " + precioTotal() + " euros" + " Fecha ltima actualizacin :" + fecha_Creacion.format(formato);
 	}
-	
+
 	public void addArticulo(Articulo arti) {
 		listaArticulo.add(arti);
 		fecha_Creacion = LocalDate.now();
 	}
-	
+
 	public void borrarArticulo(int posicion) {
-		
-		// hay que comprobar si la posicion es correcta:
-		
-		if(posicion >= 0 && posicion<this.listaArticulo.size()) // posicion < getCantidad()
-		{
+
+		if (posicion >= 0 && posicion < this.listaArticulo.size())
 			listaArticulo.remove(posicion);
-			fecha_Creacion = LocalDate.now();
-		}
+		fecha_Creacion = LocalDate.now();
 	}
-	
+
 	public void vaciarCesta() {
 		listaArticulo.clear();
 		fecha_Creacion = LocalDate.now();

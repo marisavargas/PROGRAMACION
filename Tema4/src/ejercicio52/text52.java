@@ -27,7 +27,7 @@ public class text52 {
 				Libro nietzsche = new Libro();
 				nietzsche.setAutor("Nietzsche");
 				nietzsche.setDescripcion("As habl Zaratustra");
-				nietzsche.setPrecio(15.0);
+				nietzsche.setPrecio(new BigDecimal (15));
 				// 6
 				carrito.addArticulo(nietzsche);
 				System.out.println(carrito);
