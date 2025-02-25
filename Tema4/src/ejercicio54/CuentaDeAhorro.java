@@ -9,23 +9,26 @@ public class CuentaDeAhorro {
 	private List<Movimiento> movimientos;
 	private BigDecimal saldo;
 
+	public CuentaDeAhorro(String string) {
+		
+	}
+
 	public void CuentaAhorros(String numeroCuenta) {
-	        this.numeroCuenta = numeroCuenta;
 	        this.movimientos = new ArrayList<>();
 	        this.saldo = BigDecimal.ZERO;
+	        if(numeroCuenta.length()==20){
+	        this.numeroCuenta = numeroCuenta;
+	        }
+	        }
 
 	public void añadirMovimiento(Movimiento movimiento) {
 		movimientos.add(movimiento);
-		
-		if (movimiento instanceof Cargo) {
-			saldo = saldo.subtract(movimiento.getImporte());
-		} else if (movimiento instanceof Ingreso) {
-			saldo = saldo.add(movimiento.getImporte());
-		} else if (movimiento instanceof Retirada) {
-			saldo = saldo.subtract(movimiento.getImporte());
-		}
+				
 	}
 	  public BigDecimal obtenerTotal() {
+		  for (Movimiento movimiento : movimientos) {
+			  saldo = saldo.add(movimiento.getImporte()) ;
+		}
 	        return saldo;
 	    }
 	  public List<String> obtenerMovimientos() {
@@ -35,32 +38,30 @@ public class CuentaDeAhorro {
 	        }
 	        return listaMovimientos;
 	    }
-	  public List<String> obtenerRetiradas() {
-	        List<String> listaRetiradas = new ArrayList<>();
-	        for (Movimiento m : movimientos) {
-	            if (m instanceof Retirada) {
-	                listaRetiradas.add(m.toString());
+	  public  void  obtenerRetiradas() {
+	             for (Movimiento m : movimientos) {
+	            if (m.getTipo().equals("R")) {
+	                System.out.println(m);
 	            }
 	        }
-	        return listaRetiradas;
+	        
 	    }
-	  public List<String> obtenerIngresos() {
-	        List<String> listaIngresos = new ArrayList<>();
-	        for (Movimiento m : movimientos) {
-	            if (m instanceof Ingreso) {
-	                listaIngresos.add(m.toString());
+	  public void obtenerIngresos() {
+	          for (Movimiento m : movimientos) {
+	            if (m.getTipo().equals("I")) {
+	                System.out.println(m);
 	            }
 	        }
-	        return listaIngresos;
+	       
 	    }
-	  public List<String> obtenerCargos() {
-	        List<String> listaCargos = new ArrayList<>();
+	  public void obtenerCargos() {
+	       
 	        for (Movimiento m : movimientos) {
-	            if (m instanceof Cargo) {
-	                listaCargos.add(m.toString());
+	            if (m.getTipo().equals("C") ) {
+	             System.out.println(m);
 	            }
 	        }
-	        return listaCargos;
+	        
 	    }
 	  
 }

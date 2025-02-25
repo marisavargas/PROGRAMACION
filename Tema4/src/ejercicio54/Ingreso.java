@@ -1,17 +1,24 @@
 package ejercicio54;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.text.DecimalFormat;
+
 
 public class Ingreso extends Movimiento {
 	 private String descripcion;
 
-	    public Ingreso(LocalDate fecha, BigDecimal importe, String descripcion) {
-	        super(fecha, importe);
+	    public Ingreso( BigDecimal importe, String descripcion) {
+	        super( importe);
 	        this.descripcion = descripcion;
 	    }
 	    @Override
 	    public String toString() {
-	        return String.format("[I - %s - %.2f € - %s]", fecha, importe, descripcion);
+	    	DecimalFormat formato = new DecimalFormat("#,###.00€");
+	    	return "[I" + "-" +fecha +"-"+ formato.format(importe) +"-"+ descripcion +"]" ;
 	    }
+		@Override
+		public String getTipo() {
+			// TODO Auto-generated method stub
+			return "I";
+		}
 }

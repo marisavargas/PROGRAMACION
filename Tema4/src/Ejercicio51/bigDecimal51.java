@@ -28,7 +28,7 @@ public class bigDecimal51 {
 					System.out.println("Este numero no es correcto , indique otro mayor que el anterior");
 					 numero = sc.next();
 					 num = new BigDecimal(numero);
-				}while(numUsuario.get(i-1).compareTo(num)== -1);
+				}while(numUsuario.get(i-1).compareTo(num)==1);
 				numUsuario.add(num);
 			}
 		

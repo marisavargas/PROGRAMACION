@@ -6,9 +6,19 @@ public class Text53 {
 
 	public static void main(String[] args) {
 		Hucha hucha = new Hucha();
-		BigDecimal hucha = BigDecimal.ZERO;
 		System.out.println(hucha);
-		hucha.
-		
-	}
+		hucha.meterDinero(new BigDecimal (100));
+		System.out.println(hucha);
+		hucha.meterDinero(new BigDecimal (50.501));
+		System.out.println(hucha);
+		hucha.sacarDinero(new BigDecimal (20.05));
+		System.out.println(hucha);
+		hucha.sacarDinero(new BigDecimal(200));
+		System.out.println(hucha);
+		hucha.meterDinero(new BigDecimal(200));
+		hucha.meterDinero(hucha.contarDinero());
+		System.out.println(hucha);
+		hucha.meterDinero(hucha.romperHucha());
+		System.out.println(hucha);
+	}	
 }

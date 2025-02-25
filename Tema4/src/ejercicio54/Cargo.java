@@ -1,18 +1,26 @@
 package ejercicio54;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.text.DecimalFormat;
+
 
 public class Cargo extends Movimiento {
  private String cifEmpresa;
 
-public Cargo(LocalDate fecha, BigDecimal importe,String cifEmpresa) {
-	super(fecha, importe);
+public Cargo( BigDecimal importe,String cifEmpresa) {
+	super( importe);
 	this.cifEmpresa=cifEmpresa;
 }
 
 @Override
 public String toString() {
-	return String.format("[C-%s- %.2f €- %s]", fecha, importe,cifEmpresa);
-			} 
+	DecimalFormat formato = new DecimalFormat("#,###.00€");
+	return "[C" + "-" +fecha + "-" + formato.format(importe) + "-" + cifEmpresa + "]" ;
+			}
+
+@Override
+public String getTipo() {
+	// TODO Auto-generated method stub
+	return "C";
+} 
 }

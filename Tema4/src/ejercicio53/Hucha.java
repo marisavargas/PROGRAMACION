@@ -9,7 +9,7 @@ public class Hucha {
 
 	public Hucha() {
 		this.ahorrado = BigDecimal.ZERO;
-	
+
 	}
 
 	public BigDecimal meterDinero(BigDecimal x) {
@@ -17,36 +17,32 @@ public class Hucha {
 		return ahorrado;
 	}
 
-	public BigDecimal sacarDinero(BigDecimal dinero) {
-		
-	
-		if(ahorrado.compareTo(dinero)>0) {
-		ahorrado= ahorrado.subtract(dinero);
-	
-		return ahorrado=  BigDecimal.ZERO;
-		
-	}else {
-		
-		return ahorrado= ahorrado.subtract(dinero);
-	
+	public BigDecimal sacarDinero(BigDecimal j) {
+
+		if (ahorrado.compareTo(j) > 0) {
+			ahorrado = ahorrado.subtract(j);
+			return ahorrado;
+		} else {
+
+			return ahorrado = ahorrado.subtract(ahorrado);
+
+		}
+
 	}
 
-}	
 	public BigDecimal contarDinero() {
 		return ahorrado;
 	}
 
 	public BigDecimal romperHucha() {
-		
-		
-		return ahorrado;
+		BigDecimal guardar = ahorrado;
+		ahorrado=BigDecimal.ZERO;
+		return guardar;
 	}
 
 	@Override
 	public String toString() {
-		BigDecimal formato = new DecimalFormat("#,###.00€");
+		DecimalFormat formato = new DecimalFormat("#,###.00€");
 		return formato.format(ahorrado);
 	}
 }
-
-

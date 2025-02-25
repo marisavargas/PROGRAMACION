@@ -6,9 +6,9 @@ import java.time.LocalDate;
 abstract class Movimiento {
 protected LocalDate fecha;
 protected BigDecimal importe;
-public Movimiento(LocalDate fecha, BigDecimal importe) {
+public Movimiento( BigDecimal importe) {
 	super();
-	this.fecha = fecha;
+	this.fecha = LocalDate.now();
 	this.importe = importe;
 }
 public LocalDate getFecha() {
@@ -18,10 +18,9 @@ public LocalDate getFecha() {
 public BigDecimal getImporte() {
 	return importe;
 }
-@Override
-public String toString() {
-	return "Movimiento [fecha=" + fecha + ", importe=" + importe + "]";
-}
+public abstract String getTipo(); 
+
+
 
 
 }
