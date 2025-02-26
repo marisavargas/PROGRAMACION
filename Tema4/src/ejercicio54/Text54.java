@@ -15,6 +15,12 @@ public class Text54 {
 	        cuenta.añadirMovimiento(new Ingreso( new BigDecimal("50.00"), "Pago por servicio"));
 	        cuenta.añadirMovimiento(new Ingreso( new BigDecimal("10.00"), "Venta producto"));
 	        cuenta.añadirMovimiento(new Retirada( new BigDecimal("15.00")));
+	        System.out.println(cuenta.obtenerTotal());
+	        System.out.println(cuenta.obtenerMovimientos());
+	        System.out.println(cuenta.obtenerIngresos());
+	        System.out.println(cuenta.obtenerRetiradas());
+	        System.out.println(cuenta.obtenerCargos());
+	      
 	}
 
 }

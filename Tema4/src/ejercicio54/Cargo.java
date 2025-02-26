@@ -12,6 +12,14 @@ public Cargo( BigDecimal importe,String cifEmpresa) {
 	this.cifEmpresa=cifEmpresa;
 }
 
+public String getCifEmpresa() {
+	return cifEmpresa;
+}
+
+public void setCifEmpresa(String cifEmpresa) {
+	this.cifEmpresa = cifEmpresa;
+}
+
 @Override
 public String toString() {
 	DecimalFormat formato = new DecimalFormat("#,###.00€");

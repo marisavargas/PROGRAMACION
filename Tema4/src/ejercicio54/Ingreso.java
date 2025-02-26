@@ -11,7 +11,16 @@ public class Ingreso extends Movimiento {
 	        super( importe);
 	        this.descripcion = descripcion;
 	    }
-	    @Override
+	    
+	    public String getDescripcion() {
+			return descripcion;
+		}
+
+		public void setDescripcion(String descripcion) {
+			this.descripcion = descripcion;
+		}
+
+		@Override
 	    public String toString() {
 	    	DecimalFormat formato = new DecimalFormat("#,###.00€");
 	    	return "[I" + "-" +fecha +"-"+ formato.format(importe) +"-"+ descripcion +"]" ;

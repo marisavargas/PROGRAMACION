@@ -9,10 +9,11 @@ public class Retirada extends Movimiento {
 	public Retirada( BigDecimal importe) {
 	        super( importe);
 }
+	
 	  @Override
 	    public String toString() {
 		  DecimalFormat formato = new DecimalFormat("#,###.00€");
-			return "[R" + "-" +fecha +"-"+ formato.format(importe) +"]" ;
+			return "[R" + "-" + fecha +"-"+ formato.format(importe) +"]" ;
 	    }
 	@Override
 	public String getTipo() {
