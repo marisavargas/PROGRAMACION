@@ -10,11 +10,7 @@ public class CuentaDeAhorro {
 	private List<Movimiento> movimientos;
 	private BigDecimal saldo;
 
-	public CuentaDeAhorro(String string) {
-
-	}
-
-	public void CuentaAhorros(String numeroCuenta) {
+	public CuentaDeAhorro(String numeroCuenta) {
 		this.movimientos = new ArrayList<>();
 		this.saldo = BigDecimal.ZERO;
 		if (numeroCuenta.length() == 20) {
@@ -46,37 +42,32 @@ public class CuentaDeAhorro {
 		return listaMovimientos;
 	}
 
-	public BigDecimal obtenerRetiradas() {
-		List<String> listaMovimientos = new ArrayList<>();
+	public void obtenerRetiradas() {
 		for (Movimiento m : movimientos) {
 			if (m.getTipo().equals("R")) {
-				 saldo=saldo.subtract(m.getImporte());
+				System.out.println(m);
 			}
-		}return saldo;
+		}
 
 	}
 
-	public BigDecimal obtenerIngresos() {
-		List<String> listaMovimientos = new ArrayList<>();
+	public void obtenerIngresos() {
 		for (Movimiento m : movimientos) {
 			if (m.getTipo().equals("I")) {
-				saldo=saldo.add(m.getImporte());
+				System.out.println(m);
 
 			}
 		}
-		return saldo;
 
 	}
 
-	public BigDecimal obtenerCargos() {
-		List<String> listaMovimientos = new ArrayList<>();
+	public void obtenerCargos() {
+
 		for (Movimiento m : movimientos) {
 			if (m.getTipo().equals("C")) {
-				saldo=saldo.add(m.getImporte());
+				System.out.println(m);
 			}
 		}
-		return saldo;
-		
 
 	}
 
