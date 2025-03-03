@@ -4,8 +4,10 @@ public class Fijo extends Telefono {
 private String direccion;
 
 public Fijo(Integer numero, String direccion) {
-	super(numero);
+	this.numero=numero;
 	this.direccion = direccion;
+	this.enLlamada= false;
+	}
 }
 
 
@@ -14,4 +16,4 @@ public Fijo(Integer numero, String direccion) {
 
 
 
-}
+

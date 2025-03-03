@@ -13,7 +13,7 @@ private LocalDate fechaFabricacion;
 private Boolean activo;
 public Smartphone() {
 	super();
-	this.precio= precio.ZERO;
+	this.precio=  precio.ZERO;
 	this.activo=true;
 }
 public Smartphone(String imei) {
@@ -40,7 +40,7 @@ public void desactivar() {
 	this.activo= false;
 }
 public Integer getEdad() {
-	LocalDate año= LocalDate.of(1,4 ,2000);
+	LocalDate año= LocalDate.of(2000,4,1);
 	Period periodo =fechaFabricacion.until(año);
 	return periodo.getYears();
 }
@@ -65,7 +65,7 @@ public Boolean isAltaGama(BigDecimal precioBase) {
 	}
 }
 public Boolean isDatoCompleto() {
-	if( imei.isEmpty()|| imei.isBlank() || precio==null) {
+	if( imei== null || imei.isBlank() || precio==null) {
 		return false;
 	
 	}else {
