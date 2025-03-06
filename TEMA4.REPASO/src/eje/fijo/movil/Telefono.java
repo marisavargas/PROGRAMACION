@@ -4,11 +4,17 @@ public class Telefono {
  protected Integer numero;
  protected Boolean enLlamada;
 
+ 
+public Telefono(Integer numero) {
+	super();
+	this.numero = numero;
+	this.enLlamada = false;
+}
 public Integer consultarNumero () {
 	return numero;
 }
  public void marcar( int nuevoNumero) {
-	 System.out.println("llamando a "+ numero );
+	 System.out.println("llamando a "+ nuevoNumero );
 	 if(nuevoNumero==numero){
 		 System.out.println("comunicando");
 	 }

@@ -1,18 +1,13 @@
 package eje.fijo.movil;
 
-import java.math.BigDecimal;
+public class Movil extends Telefono {
+ localizacionGps gps;
 
-public  class Movil extends Telefono {
-private BigDecimal longitud;
-private BigDecimal latitud;
-
-public Movil(Integer numero, BigDecimal longitud,BigDecimal latitud) {
-	this.numero=numero;
-	this.longitud=longitud;
-	this.latitud=latitud;
-	this.enLlamada= false;
+public Movil(Integer numero, localizacionGps gps) {
+	super(numero);
+	this.gps = gps;
+	
 }
-
-
-
+ 
+	
 }
