@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="java.math.RoundingMode"/>
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="librerias.LIbroFisico"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="librerias.Libro"/>
 </qualifiedTypeNameHistroy>
