@@ -52,6 +52,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA4.REPASO\src\librerias"/>
+			<item value="C:\Users\mvargas2138\Downloads\PROGRAMACION-main"/>
 			<item value="C:\Users\mvargas2138\Downloads\PROGRAMACION-main\PROGRAMACION-main\TEMA4.REPASO.zip"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\Tema4\src\ejercicio54"/>
 			<item value="C:\Users\PC\Desktop\hoy\PROGRAMACION\Tema4\src\ejercicio53"/>
