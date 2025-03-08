@@ -25,6 +25,11 @@ public Integer getAlto() {
 public void setAlto(Integer alto) {
 	this.alto = alto;
 }
+@Override
+public String toString() {
+	return super.toString() + " - ancho: " + this.ancho + " - alto: "+ this.alto + " - peso: " + this.peso;
+}
+
 
 
 }

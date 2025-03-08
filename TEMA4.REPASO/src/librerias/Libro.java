@@ -47,5 +47,11 @@ public Integer getPeso() {
 public void setPeso(Integer peso) {
 	this.peso = peso;
 }
+public String toString() {
+	return "titulo=" + titulo + ", autor=" + autor + ", fechaEdicion=" + fechaEdicion + ", paginas="
+			+ numeroPagina;
+}	
+
+
 
 }
