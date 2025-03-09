@@ -3,6 +3,7 @@ package ejercicio7;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Academia {
@@ -55,11 +56,34 @@ public class Academia {
 		
 	}
 	public void borrarCursosPasados() {
-		
-		 for (Curso curso : cursos) {
+		Iterator<Curso> iterator = cursos.iterator();
+		while( iterator.hasNext()) {
+			Curso curso= iterator.next();
 			if ( curso.getFechaFin().isBefore(LocalDate.now())) {
-				cursos.remove(curso);
+				iterator.remove();
 		}
+		}
+			
+		
 	}
+	public Curso getCursoMasBarato() {
+		Curso cursoBarato = cursos.get(0);
+	for (int i = 0; i < cursos.size(); i++) {
+		if(!(i+1>cursos.size())) {
+				if(cursoBarato.getPrecio().compareTo(cursos.get(i + 1 ).getPrecio())<0 && 
+				cursos.get(i).getFechaFin().isAfter(LocalDate.now())) {
+					cursoBarato= cursos.get(i);
+			}
+		}
+	}return cursoBarato;
 	}
-}
+	public Integer getTotalPlazasLibres() {
+		Integer plazasLibres=0;
+		for (Curso curso : cursos) {
+			 if(curso.isPlazasLibres()) {
+				 plazasLibres+= curso.getNumPlazasTotal()-curso.getNumPlazasOcu();	
+		}
+		} return plazasLibres;
+	}
+	
+	}
