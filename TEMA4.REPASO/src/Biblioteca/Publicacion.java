@@ -1,15 +1,16 @@
 package Biblioteca;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-public abstract class publicacion {
+public abstract class Publicacion {
 	protected Integer codigo;
 	protected String autor;
 	protected String titulo;
 	protected LocalDate anoPublicacion;
 	
 	
-	public publicacion(Integer codigo, String autor, String titulo, LocalDate anoPublicacion) {
+	public Publicacion(Integer codigo, String autor, String titulo, LocalDate anoPublicacion) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
@@ -39,6 +40,26 @@ public abstract class publicacion {
 	}
 	public void setAnoPublicacion(LocalDate anoPublicacion) {
 		this.anoPublicacion = anoPublicacion;
+	}
+	@Override
+	public String toString() {
+		return "Publicacion [codigo=" + codigo + ", autor=" + autor + ", titulo=" + titulo + ", anoPublicacion="
+				+ anoPublicacion + "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Publicacion other = (Publicacion) obj;
+		return Objects.equals(codigo, other.codigo);
 	}
 	
 
