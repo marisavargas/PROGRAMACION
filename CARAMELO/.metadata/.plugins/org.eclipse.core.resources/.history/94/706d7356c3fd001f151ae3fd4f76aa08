@@ -1,0 +1,92 @@
+package ExamenBMarisaVargas;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Objects;
+
+public abstract class Arbol {
+	protected Integer numSerie;
+	protected LocalDate fechaPlantacion;
+	protected BigDecimal alturaArbol;
+	protected BigDecimal alturaExportacion;
+	protected BigDecimal precioExportacion;
+
+	public Arbol(Integer numSerie) {
+		super();
+		this.numSerie = numSerie;
+		this.fechaPlantacion = LocalDate.now();
+		BigDecimal zero = this.alturaArbol.ZERO;
+
+	}
+
+	public BigDecimal getAlturaArbol() {
+		return alturaArbol;
+	}
+
+	public void setAlturaArbol(BigDecimal alturaArbol) {
+		this.alturaArbol = alturaArbol;
+	}
+
+	public BigDecimal getPrecioExportacion() {
+		return precioExportacion;
+	}
+
+	public Integer getNumSerie() {
+		return numSerie;
+	}
+
+	public static LocalDate getFechaPlantacion() {
+		return fechaPlantacion;
+	}
+
+	public void setFechaPlantacion(LocalDate fechaPlantacion) {
+		this.fechaPlantacion = fechaPlantacion;
+	}
+
+	public BigDecimal getAlturaExportacion() {
+		return alturaExportacion;
+	}
+
+	public Integer getEdad() {
+		Period periodo = fechaPlantacion.until(LocalDate.now());
+		Integer mesesEdad = periodo.getMonths();
+		return mesesEdad;
+	}
+
+	public Boolean sePuedeExportar() {
+		BigDecimal alturaFrutal= new BigDecimal(ArbolFrutal.ALTURAFRUTAL);
+		if ( alturaArbol.compareTo(alturaFrutal)>=0 ) {
+			System.out.println("el arbol de fruta puede ser exportado");
+			return true;
+
+		}
+		BigDecimal alturaPino = new BigDecimal(ArbolPino.ALTURAPINO);
+		if (alturaArbol.compareTo(alturaPino)>=0 ) {
+			System.out.println("el pino puede se exportado");
+			return true;
+
+		}else {
+			return false;
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(numSerie);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Arbol other = (Arbol) obj;
+		return Objects.equals(numSerie, other.numSerie);
+	}
+	
+
+}

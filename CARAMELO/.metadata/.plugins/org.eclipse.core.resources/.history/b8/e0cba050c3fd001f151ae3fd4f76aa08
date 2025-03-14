@@ -1,0 +1,8 @@
+package ExamenBMarisaVargas;
+
+import java.util.List;
+
+public class Plantacion {
+private String CIF;
+List<Arbol>arboles;
+}
