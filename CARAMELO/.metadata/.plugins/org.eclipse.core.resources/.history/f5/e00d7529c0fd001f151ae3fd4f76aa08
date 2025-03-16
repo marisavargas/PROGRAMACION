@@ -1,0 +1,70 @@
+package ExamenBMarisaVargas;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Period;
+
+public abstract class Arbol {
+	protected Integer numSerie;
+	protected LocalDate fechaPlantacion;
+	protected BigDecimal alturaArbol;
+	protected BigDecimal alturaExportacion;
+	protected BigDecimal precioExportacion;
+
+	public Arbol(Integer numSerie) {
+		super();
+		this.numSerie = numSerie;
+		this.fechaPlantacion = LocalDate.now();
+		BigDecimal zero = this.alturaArbol.ZERO;
+
+	}
+
+	public BigDecimal getAlturaArbol() {
+		return alturaArbol;
+	}
+
+	public void setAlturaArbol(BigDecimal alturaArbol) {
+		this.alturaArbol = alturaArbol;
+	}
+
+	public BigDecimal getPrecioExportacion() {
+		return precioExportacion;
+	}
+
+	public Integer getNumSerie() {
+		return numSerie;
+	}
+
+	public LocalDate getFechaPlantacion() {
+		return fechaPlantacion;
+	}
+
+	public void setFechaPlantacion(LocalDate fechaPlantacion) {
+		this.fechaPlantacion = fechaPlantacion;
+	}
+
+	public BigDecimal getAlturaExportacion() {
+		return alturaExportacion;
+	}
+
+	public Integer getEdad() {
+		Period periodo = fechaPlantacion.until(LocalDate.now());
+		Integer mesesEdad = periodo.getMonths();
+		return mesesEdad;
+	}
+
+	public Boolean sePuedeExportar() {
+
+		if (alturaArbol >= ArbolFrutal.ALTURAFRUTAL) {
+			System.out.println("el arbol de fruta puede ser exportado");
+			return true;
+
+		}
+		if (alturaArbol > ArbolPino.ALTURAPINO) {
+			System.out.println("el pino puede se exportado");
+			return true;
+
+		}
+	}
+
+}

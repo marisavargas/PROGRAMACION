@@ -1,0 +1,12 @@
+package ExamenBMarisaVargas;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public abstract class arbol {
+	protected Integer numSerie;
+	protected LocalDate fechaPlantacion;
+	protected BigDecimal altura;
+	
+
+}

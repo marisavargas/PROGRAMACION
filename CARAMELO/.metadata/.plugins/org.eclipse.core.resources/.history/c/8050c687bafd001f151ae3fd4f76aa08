@@ -1,0 +1,10 @@
+package ExamenBMarisaVargas;
+
+import java.math.BigDecimal;
+
+public class ArbolFrutal extends Arbol{
+private String especie;
+public static final Integer  ALTURA =150;
+public static final Double PRECIO=0.5;
+
+};

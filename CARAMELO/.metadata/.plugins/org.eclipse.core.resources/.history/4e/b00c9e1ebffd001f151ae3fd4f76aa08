@@ -1,0 +1,31 @@
+package ExamenBMarisaVargas;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public abstract class Arbol {
+	protected Integer numSerie;
+	protected LocalDate fechaPlantacion;
+	protected BigDecimal altura;
+	public Arbol(Integer numSerie) {
+		super();
+		this.numSerie = numSerie;
+		this.fechaPlantacion= LocalDate.now();
+		BigDecimal zero = this.altura.ZERO;
+		
+	}
+	public LocalDate getFechaPlantacion() {
+		return fechaPlantacion;
+	}
+	public void setFechaPlantacion(LocalDate fechaPlantacion) {
+		this.fechaPlantacion = fechaPlantacion;
+	}
+	public BigDecimal getAltura() {
+		return altura;
+	}
+	public void setAltura(BigDecimal altura) {
+		this.altura = altura;
+	}
+	
+
+}

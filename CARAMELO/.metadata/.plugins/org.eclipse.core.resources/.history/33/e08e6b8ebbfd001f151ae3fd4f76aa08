@@ -1,0 +1,10 @@
+package ExamenBMarisaVargas;
+
+
+
+public class ArbolFrutal extends Arbol{
+private String especie;
+public static final Integer  ALTURAFRUTAL =150;
+public static final Double PRECIOFRUTAL=0.5;
+
+};

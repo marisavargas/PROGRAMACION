@@ -1,0 +1,29 @@
+package ExamenBMarisaVargas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Plantacion {
+private String CIF;
+List<Arbol>arboles;
+public Plantacion(String cIF) {
+	super();
+	CIF = cIF;
+	List<Arbol>arboles=new ArrayList<>();
+}
+public String getCIF() {
+	return CIF;
+}
+public void setCIF(String cIF) {
+	CIF = cIF;
+}
+public void addArbol() {
+	for (Arbol arbol : arboles) {
+		arboles.add(arbol);
+	}
+}
+public getArbolesAnualidad() {
+	
+}
+public getAlturaTotal;
+}
