@@ -3,6 +3,7 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 		<section name="NewWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="0"/>
@@ -53,6 +54,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\PC\Desktop\hoy\PROGRAMACION\ExamenANicolasAdones"/>
+			<item value="C:\Users\PC\Desktop\hoy\PROGRAMACION\ExamenBHugoDominguez"/>
+			<item value="C:\Users\PC\Desktop\hoy\PROGRAMACION\EXAMENSEGUNDOTRIME"/>
 			<item value="C:\Users\PC\Desktop\hoy\PROGRAMACION\TEMA4.REPASO"/>
 			<item value="C:\Users\mvargas2138\Desktop\PROGRAMACION\TEMA4.REPASO\src\librerias"/>
 			<item value="C:\Users\mvargas2138\Downloads\PROGRAMACION-main"/>
