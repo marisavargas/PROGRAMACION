@@ -10,6 +10,13 @@ public class Plantacion {
 	private String cif;
 	private List<Arbol> arboles;
 
+	
+	public Plantacion(String cif) {
+		super();
+		this.cif = cif;
+		this.arboles = new ArrayList<>();
+	}
+
 	public String getCif() {
 		return cif;
 	}
