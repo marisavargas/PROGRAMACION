@@ -1,0 +1,5 @@
+package ExamenBHugoDominguez;
+
+public class ArbolPino extends Arbol{
+	
+}

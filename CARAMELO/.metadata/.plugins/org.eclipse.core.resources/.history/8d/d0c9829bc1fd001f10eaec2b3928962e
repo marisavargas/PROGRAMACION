@@ -1,0 +1,30 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class ArbolPino extends Arbol {
+
+	//private static final BigDecimal ALTURA_MIN_PINO = new BigDecimal(150);
+
+	public ArbolPino(Integer numSerie) {
+		super(numSerie);
+	}
+
+	@Override
+	public void setAlturaMinExport() {
+		this.alturaMinExport = new BigDecimal(15);
+	}
+
+	@Override
+	public void getPrecioExport() {
+		this.precioExport = (getAltura().multiply(new BigDecimal(0.2))).setScale(2, RoundingMode.HALF_DOWN);
+	}
+
+	@Override
+	public void getAlturaMinExport() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

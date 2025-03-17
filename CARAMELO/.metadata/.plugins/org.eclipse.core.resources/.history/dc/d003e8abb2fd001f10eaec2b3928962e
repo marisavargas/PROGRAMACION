@@ -1,0 +1,6 @@
+package ExamenBHugoDominguez;
+
+public class ArbolFrutal extends Arbol{
+	private String especie;
+	
+}

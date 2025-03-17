@@ -1,0 +1,75 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Objects;
+
+public abstract class Arbol {
+	private Integer numSerie;
+	private LocalDate fechaPlant;
+	private BigDecimal altura;
+	private BigDecimal precioExport;
+	private BigDecimal alturaMinExport;
+
+	public Arbol(Integer numSerie) {
+		this.numSerie = numSerie;
+		this.fechaPlant = LocalDate.now();
+		this.altura = BigDecimal.ZERO;
+	}
+
+	public abstract BigDecimal getPrecioExport();
+
+	public abstract BigDecimal getAlturaMinExport();
+
+	public LocalDate getFechaPlant() {
+		return fechaPlant;
+	}
+
+	public void setFechaPlant(LocalDate fechaPlant) {
+		this.fechaPlant = fechaPlant;
+	}
+
+	public BigDecimal getAltura() {
+		return altura;
+	}
+
+	public void setAltura(BigDecimal altura) {
+		this.altura = altura;
+	}
+
+	public Integer getNumSerie() {
+		return numSerie;
+	}
+
+	public long getEdad() {
+		Period periodo = fechaPlant.until(LocalDate.now());
+		return periodo.getMonths() + periodo.getYears() * 12;
+	}
+
+	public Boolean sePuedeExportar() {
+		if (this.altura.min(this.alturaMinExport) == altura) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(numSerie);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Arbol other = (Arbol) obj;
+		return Objects.equals(numSerie, other.numSerie);
+	}
+
+}

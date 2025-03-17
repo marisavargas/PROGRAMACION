@@ -1,0 +1,27 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+
+public abstract class ArbolFrutal extends Arbol {
+	
+	private String especie;
+	private static final BigDecimal ALTURA_MIN_FRUTAL = new BigDecimal(150);
+
+	public ArbolFrutal(Integer numSerie) {
+		super(numSerie);
+		this.alturaMinExport = ALTURA_MIN_FRUTAL;
+	}
+	
+	public BigDecimal setPrecio() {
+		this.precioExport = getAltura().multiply(new BigDecimal(0.5)); 
+	}
+
+	public String getEspecie() {
+		return especie;
+	}
+
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+
+}

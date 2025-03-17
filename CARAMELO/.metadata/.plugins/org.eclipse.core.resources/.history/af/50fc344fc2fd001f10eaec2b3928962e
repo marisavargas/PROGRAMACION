@@ -1,0 +1,26 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class ArbolPino extends Arbol {
+
+	// private static final BigDecimal ALTURA_MIN_PINO = new BigDecimal(150);
+
+	public ArbolPino(Integer numSerie) {
+		super(numSerie);
+	}
+
+	@Override
+	public void getPrecioExport() {
+		
+
+	}
+
+	@Override
+	public void getAlturaMinExport() {
+		
+
+	}
+
+}

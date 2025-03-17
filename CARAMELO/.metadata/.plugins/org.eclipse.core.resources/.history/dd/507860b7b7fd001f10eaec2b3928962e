@@ -1,0 +1,28 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public abstract class ArbolFrutal extends Arbol {
+	
+	private String especie;
+	private static final BigDecimal ALTURA_MIN_FRUTAL = new BigDecimal(150);
+
+	public ArbolFrutal(Integer numSerie) {
+		super(numSerie);
+		this.alturaMinExport = ALTURA_MIN_FRUTAL;
+	}
+	
+	public void setPrecioExport() {
+		this.precioExport = (getAltura().multiply(new BigDecimal(0.5))).setScale(2, RoundingMode.HALF_DOWN); 
+	}
+
+	public String getEspecie() {
+		return especie;
+	}
+
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+
+}

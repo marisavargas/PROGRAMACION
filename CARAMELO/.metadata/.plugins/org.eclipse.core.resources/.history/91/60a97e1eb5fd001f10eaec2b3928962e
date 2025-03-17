@@ -1,0 +1,15 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+
+public abstract class ArbolPino extends Arbol {
+
+	private static final BigDecimal ALTURA_MIN_PINO = new BigDecimal(150);
+
+	public ArbolPino(Integer numSerie) {
+		super(numSerie);
+		this.alturaMinExport = ALTURA_MIN_PINO;
+
+	}
+
+}

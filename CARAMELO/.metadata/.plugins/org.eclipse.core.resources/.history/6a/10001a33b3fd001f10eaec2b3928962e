@@ -1,0 +1,21 @@
+package ExamenBHugoDominguez;
+
+public class ArbolFrutal extends Arbol {
+
+	private String especie;
+
+	public ArbolFrutal(Integer numSerie) {
+		super(numSerie);
+		this.al
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getEspecie() {
+		return especie;
+	}
+
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+
+}

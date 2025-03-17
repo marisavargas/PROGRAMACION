@@ -1,0 +1,65 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.nio.file.spi.FileSystemProvider;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		// APARTADO 1
+		Plantacion plant1 = new Plantacion("98765432X");
+		System.out.println(plant1);
+			
+		// APARTADO 2
+		ArbolPino pino10 = new ArbolPino(10);
+		plant1.addArbol(pino10);
+		ArbolPino pino11 = new ArbolPino(11);
+		plant1.addArbol(pino11);
+		ArbolPino pino12 = new ArbolPino(12);
+		plant1.addArbol(pino12);
+
+		ArbolFrutal frutal20 = new ArbolFrutal(20);
+		frutal20.setEspecie("Naranjo");
+		plant1.addArbol(frutal20);
+		ArbolFrutal frutal21 = new ArbolFrutal(21);
+		frutal21.setEspecie("Limonero");
+		plant1.addArbol(frutal21);
+
+		System.out.println(plant1);
+
+		// APARTADO 3
+		frutal20.setAltura(new BigDecimal(181.4));
+		LocalDate fecha1 = LocalDate.of(2021, 1, 15);
+		frutal20.setFechaPlant(fecha1);
+		frutal21.setAltura(new BigDecimal(84));
+		LocalDate fechaPinos = frutal20.getFechaPlant().plusMonths(3);
+		pino10.setFechaPlant(fechaPinos);
+		pino11.setFechaPlant(fechaPinos);
+		pino12.setFechaPlant(fechaPinos);
+		pino10.setAltura(new BigDecimal(80));
+		pino11.setAltura(new BigDecimal(80));
+		pino12.setAltura(new BigDecimal(110));
+		
+		System.out.println(plant1);
+		
+		//APARTADO 4
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		System.out.println(pino10.getFechaPlant().format(formato));
+		/*El "meses" lo pongo aquí porque si lo pongo en el getEdad() tendría que cambiar el formato
+		a String y no podría comparar edades o hacer calculos con ellas*/
+		System.out.println(pino10.getEdad() + " meses");
+		
+		/*//APARTADO 5
+		DecimalFormat formato1 = new DecimalFormat(" #,###.00 €");
+		System.out.println(formato1.format(plant1.calcularGananciaExportacion()));*/
+		
+		//APARTADO 6
+		/*plant1.exportarArboles();*/
+		System.out.println(plant1);
+	}
+
+}

@@ -1,0 +1,11 @@
+package ExamenBHugoDominguez;
+
+public class ArbolFrutal extends Arbol{
+	public ArbolFrutal(Integer numSerie) {
+		super(numSerie);
+		// TODO Auto-generated constructor stub
+	}
+
+	private String especie;
+	
+}

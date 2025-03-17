@@ -1,0 +1,55 @@
+package ExamenBHugoDominguez;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Plantacion {
+	private String cif;
+	private List<Arbol> arboles;
+
+	public Plantacion(String cif) {
+		this.cif = cif;
+	}
+
+	public String getCif() {
+		return cif;
+	}
+
+	public void setCif(String cif) {
+		this.cif = cif;
+	}
+	
+	public void addArbol(Arbol arbol) {
+		arboles.add(arbol);
+	}
+	
+	public List<Arbol> getArbolesAnualidad(Integer anyo){
+		List<Arbol> arbolesAnual = new ArrayList<Arbol>();
+		for (Arbol arbol : arboles) {
+			if (arbol.getFechaPlant().getYear() == anyo) {
+				arboles.add(arbol);
+			}
+		}
+		return arbolesAnual;
+	}
+	
+	public BigDecimal getAlturaTotal() {
+		BigDecimal alturaTotal = new BigDecimal(0);
+		for (Arbol arbol : arboles) {
+			alturaTotal.add(arbol.getAltura());
+		}
+		return alturaTotal.setScale(2, RoundingMode.HALF_UP);
+	}
+	
+	public BigDecimal calcularGananciaExportacion() {
+		BigDecimal ganancias = new BigDecimal(0);
+		for(Arbol arbol : arboles) {
+			if (arbol.sePuedeExportar() == true) {
+				ganancias.add(arbol.getPrecioExport());
+			}
+		}
+		return ganancias;
+	}
+}
