@@ -2,7 +2,7 @@ package examenAnimales;
 
 import java.math.BigDecimal;
 
-public class Pollo extends Animal{
+public class Pollo extends Animal {
 
 	public Pollo(Integer numeroRegstro) {
 		super(numeroRegstro);
@@ -11,23 +11,22 @@ public class Pollo extends Animal{
 
 	@Override
 	public BigDecimal getPesoMinVenta() {
-		
-		return  new BigDecimal(5);
+
+		return new BigDecimal(5);
 	}
 
 	@Override
 	public BigDecimal getPrecioVentaKg() {
-		
+
 		return VENTAPOLLO;
 	}
 
 	@Override
 	public Boolean sePuedeVender() {
-		if(peso.compareTo(getPesoMinVenta())<0) {
+		if (peso.compareTo(getPesoMinVenta()) < 0) {
 			return false;
 		}
-				return true ;
+		return true;
 	}
-	
 
 }
