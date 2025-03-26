@@ -2,6 +2,7 @@ package Tema55;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -67,13 +68,15 @@ public class Evaluacion {
 		return sumaNota.divide(new BigDecimal(alumnos.size()), 2, RoundingMode.HALF_DOWN);
 	}
 
-	public List<BigDecimal> obtenerSuspensos() {
-
-		Collection<BigDecimal> notas = alumnos.values();
-		for (BigDecimal nota : notas) {
-			if (nota.min(5)) {
+	public List<String> obtenerSuspensos() {
+		List<String> alumnoSuspensos= new ArrayList<>();
+		Collection<String> notas = alumnos.keySet();
+		for (String nota : notas) {
+			if (alumnos.get(nota).compareTo(new BigDecimal (5))<0) {
+				alumnoSuspensos.add(nota);
 
 			}
 		}
+		return alumnoSuspensos;
 	}
 }
