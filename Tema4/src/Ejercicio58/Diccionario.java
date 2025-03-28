@@ -1,19 +1,40 @@
 package Ejercicio58;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Diccionario {
-
-	Map<String, List<String>> mapa;
-
-	public Diccionario(Map<String, List<String>> mapa) {
-
+	private Map<String,List<String>> mapa;
+	public void Diccionario() {
 		mapa = new HashMap<>();
 	}
-
-	public List<String> palabrasNuevas() {
+	public void cargarDiccionario(List<String> lista) {
+		for(String patata : lista) {
+			String clave = patata.substring(0,1).toUpperCase();
+			if(!mapa.containsKey(clave)) {
+				List<String> peo = new ArrayList<>();
+				peo.add(patata);
+				mapa.put(clave, peo);
+			}
+			else {
+				mapa.get(clave).add(patata);
+			}
+		}
+	}
+	public void borrarDiccionario() {
+		mapa.clear();
+	}
+	public void imprimirPalabras(String letra) {
+		if(mapa.containsKey(letra.toUpperCase())) {
+			System.out.println("Letra: " + letra.toUpperCase());
+			for(String patata : mapa.get(letra.toUpperCase())) {
+				System.out.println(patata);
+			}
+		}
+	
+	
 
 	}
 	
