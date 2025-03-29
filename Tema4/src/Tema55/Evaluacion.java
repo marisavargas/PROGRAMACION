@@ -70,6 +70,17 @@ public class Evaluacion {
 		}
 		return sumaNota.divide(new BigDecimal(alumnos.size()), 2, RoundingMode.HALF_DOWN);
 	}
+	public Integer obtenerCantidadAprobaddos() {
+		Integer contador=0;
+		Collection<String> notas = alumnos.keySet();
+		for (String nota : notas) {
+			if (alumnos.get(nota).compareTo(new BigDecimal(5)) > 0) {
+				  contador ++;
+
+			}
+		}
+		return contador;
+	}
 
 	public List<String> obtenerSuspensos() {
 		List<String> alumnoSuspensos = new ArrayList<>();
@@ -114,15 +125,6 @@ public class Evaluacion {
 		return aprobados + "\n" + suspensos;
 	}
 
-	public Map<String, Integer> word0(String[] strings) {
-
-		Map<String, Integer> mapa = new HashMap<>();
-		for (String str : strings) {
-			if (!mapa.containsKey(str)) {
-				mapa.put(str, str.length());
-			}
-		}
-		return mapa;
-	}
+	
 
 }

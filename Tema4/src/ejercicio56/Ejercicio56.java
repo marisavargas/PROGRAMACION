@@ -7,27 +7,27 @@ import java.util.Scanner;
 public class Ejercicio56 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Map<Integer,Integer>numeros = new HashMap<>();
+		Map<Integer,Integer>patatas = new HashMap<>();
 
 		Integer contadorTotal=0;
 		do {
 		System.out.println("Introduce un numero");
 		Integer numero=sc.nextInt();
-		if(!numero.equals(0)) {
-			if(numeros.containsKey(numero)) {
-				Integer cantidadActual = numeros.get(numero);
-				numeros.put(numero, cantidadActual+1);
+		if(!patatas.equals(0)) {
+			if(patatas.containsKey(numero)) {
+				Integer cantidadActual = patatas.get(numero);
+				patatas.put(numero, cantidadActual+1);
 				
 			}
 			else {
-				numeros.put(numero,1);
+				patatas.put(numero,1);
 			}
 			contadorTotal ++;
 		}
 		}
-		while(!numeros.equals(0));
+		while(!patatas.equals(0));
 			sc.close();
-			imprimirNumeros(numeros,contadorTotal);
+			imprimirNumeros(patatas,contadorTotal);
 		}
 	private static void imprimirNumeros(Map<Integer,Integer> numeros,Integer numero) {
 		for (Map.Entry<Integer,Integer>entry : numeros.entrySet()) {
