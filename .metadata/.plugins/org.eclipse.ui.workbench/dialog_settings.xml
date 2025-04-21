@@ -32,10 +32,10 @@
 		</section>
 	</section>
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="497"/>
-		<item key="DIALOG_Y_ORIGIN" value="154"/>
+		<item key="DIALOG_X_ORIGIN" value="217"/>
+		<item key="DIALOG_Y_ORIGIN" value="34"/>
 		<item key="DIALOG_WIDTH" value="942"/>
-		<item key="DIALOG_HEIGHT" value="747"/>
+		<item key="DIALOG_HEIGHT" value="728"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="PropertyDialog.dialogBounds">
@@ -65,5 +65,12 @@
 			<item key="DIALOG_HEIGHT" value="565"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="-30"/>
+		<item key="DIALOG_Y_ORIGIN" value="-50"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="728"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
